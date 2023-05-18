@@ -4,6 +4,7 @@ import { Provider } from "react-redux";
 import store from "../redux/store";
 import Home from "./../pages/Home/Home";
 import SearchBar from "../components/search_bar/SearchBar";
+import EstateAgent from "../components/banner/EstateAgent";
 
 describe("Home component", () => {
   test("should render the Home component", () => {
@@ -39,7 +40,9 @@ describe("Home component", () => {
   test("should render become rental agent banner", () => {
     render(
       <MemoryRouter>
-        <Provider store={store}></Provider>
+        <Provider store={store}>
+          <EstateAgent />
+        </Provider>
       </MemoryRouter>
     );
 
