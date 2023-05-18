@@ -34,4 +34,22 @@ describe("Home component", () => {
     expect(minPrice).toBeInTheDocument();
     expect(forRentButton).toBeInTheDocument();
   });
+
+  // test for become rental agent
+  test("should render become rental agent banner", () => {
+    render(
+      <MemoryRouter>
+        <Provider store={store}>
+          <EstateAgent />
+        </Provider>
+      </MemoryRouter>
+    );
+
+    const title = screen.getByText(/Become a Rental Agent/i);
+    const btn = screen.getByText(/Register Now/i);
+
+    // expect the elements to be in the document
+    expect(title).toBeInTheDocument();
+    expect(btn).toBeInTheDocument();
+  });
 });
