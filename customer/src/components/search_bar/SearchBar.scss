@@ -1,0 +1,37 @@
+.search__container {
+  background-color: #fff;
+  width: 100%;
+  padding: 2rem;
+  margin-left: 1px;
+
+  // input for the search bar in the middle
+  .search__input {
+    width: 100%;
+    height: 3rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: none;
+    color: rgb(39, 35, 35);
+    background-color: rgb(243, 243, 243);
+  }
+
+  .search__input:focus,
+  search__input:active {
+    outline: none;
+    border: none;
+  }
+
+  .search__input:hover {
+    border: 1px solid rgb(239, 168, 93);
+  }
+
+  // search button in the middle
+  .search__now {
+  }
+}
+
+// mdeia query
+@media (max-width: 768px) {
+}

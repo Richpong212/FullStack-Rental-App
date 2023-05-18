@@ -1,0 +1,58 @@
+/* --------------------------------------------------
+	## User List
+---------------------------------------------------- */
+.single-user-list {
+	box-shadow: $box-shadow;
+	padding: 40px 18px 32px 18px;
+	margin-bottom: 30px;
+	border-radius: 10px;
+	@include transition(all, 0.5s, ease);
+	.thumb {
+		height: 70px;
+		width: 70px;
+		line-height: 70px;
+		background: #FFEEE2;
+		text-align: center;
+		border-radius: 50%;
+		display: inline-block;
+		margin-bottom: 25px;
+	}
+	.details {
+		h4 {
+			a {
+				@include transition(all, 0.5s, ease);
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+		p {
+			margin-bottom: 15px;
+		}
+		span {
+			color: var(--main-color-one);
+			font-weight: 500;
+			font-size: 14px;
+			i {
+				margin-right: 8px;
+			}
+		}
+		.phone {
+			margin-right: 20px;
+		}
+		.social-list {
+			margin-top: 18px;
+			a {
+				font-size: 20px;
+				padding: 0 8px;
+				@include transition(all, 0.5s, ease);
+				&:hover {
+					color: var(--main-color-one);
+				}
+			}
+		}
+	}
+	&:hover {
+		box-shadow: $box-shadow2;
+	}
+}

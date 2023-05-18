@@ -1,0 +1,152 @@
+/*----------------------------------------------
+    ## Apartments slider
+----------------------------------------------*/
+.apartments-slider {
+	.thumb {
+		position: relative;
+		.title {
+			position: absolute;
+		    margin-left: -170px;
+		    top: 60px;
+		    font-weight: 700;
+		    z-index: 3;
+		}
+		img {
+		    border-radius: 10px;
+		}
+		&:before {
+            content: '';
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    right: 0;
+		    bottom: 0;
+		    width: 100%;
+		    height: 100%;
+		    background: rgba(0,0,0,0.1);
+		    z-index: 2;
+		    border-radius: 10px;
+	    }
+	}
+	.details {
+		.title {
+			display: none;
+		}
+		del {
+			color: rgba(0,0,0,0.13);
+		}
+		h3 {
+			font-weight: 600;
+			font-size: 32px;
+		}
+		.sub-title {
+			margin-bottom: 0;
+			margin-top: 18px;
+		}
+		span {
+			i {
+				color: var(--main-color-one);
+				margin-right: 8px;
+			}
+		}
+	}
+}
+.apartments-slider {
+	.owl-controls {
+		max-width: 280px;
+		margin: 0 auto;
+		position: relative;
+	    margin-top: 25px;
+	    margin-bottom: 10px;
+	}
+	.owl-nav {
+		display: inline-block;
+		.owl-prev {
+			position: absolute;
+		    bottom: -10px;
+		    left: 0;
+		    &:hover {
+		    	box-shadow: none;
+		    }
+		}
+		.owl-next {
+			position: absolute;
+		    bottom: -10px;
+		    right: 0;
+		}
+	}
+	.owl-dots {
+	    text-align: center;
+	}
+	.owl-dot {
+		height: 12px;
+		width: 12px;
+		border-radius: 50%;
+		background: #FFEEE2;
+		@include transition(all, 0.5s, ease);
+		display: inline-block;
+		margin: 0 4px;
+		&.active {
+			width: 30px;
+			border-radius: 10px;
+			background: var(--main-color-one);
+		}
+	}
+}
+
+
+
+/*----------------------------------------------
+    ## Apartments slider 2
+----------------------------------------------*/
+.apartments-slider-2 {
+	.item {
+		margin-bottom: 80px;
+	}
+	.thumb {
+		img {
+			border-radius: 10px;
+		}
+	}
+	.details {
+		border-radius: 10px;
+		background: $color-white;
+		box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.05);
+		padding: 20px 30px 35px;
+		position: relative; 
+		span {
+			font-size: 45px;
+			font-weight: 700;
+			color: #E2E2E2;
+			line-height: 1.2;
+		}
+		h6 {
+			position: absolute;
+		    top: 45px;
+		    left: 32px;
+		    margin-bottom: 0;
+		}
+		p {
+			margin-bottom: 30px;
+		}
+	}
+	.align-self-end {
+		margin-bottom: -80px;
+    	margin-left: -113px;
+	}
+}
+.ap2-slider-controls {
+	margin-bottom: 10px;
+	.text {
+		display: inline-block;
+	}
+	.ap2-list-progress {
+		width: 77%;
+		display: inline-block;
+		margin-right: 50px;
+	}
+	.rld-control-nav {
+		display: inline-block;
+	    position: relative;
+	}
+}

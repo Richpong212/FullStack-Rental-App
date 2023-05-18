@@ -1,0 +1,85 @@
+/*--------------------------------------------------
+    ##Footer
+---------------------------------------------------*/
+.footer-area {
+	background: #EBEEF3;
+	padding-top: 100px;
+	z-index: 1;
+	position: relative;
+	.widget {
+		border: 0;
+	}
+	.footer-top {
+		border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+		padding-bottom: 48px;
+	}
+	.footer-logo {
+		img {
+			max-width: 140px;
+		}
+	}
+	.footer-social {
+		span {
+			margin-right: 20px;
+			color: var(--heading-color);
+		}
+		.social-icon {
+			display: inline-block;
+		}
+	}
+	.footer-bottom {
+		padding-top: 50px;
+	}
+	.copy-right {
+		padding: 0 0 44px 0;
+		color: rgba(0, 0, 0, 0.80);
+		a {
+			font-weight: 600;
+			@include transition(all, 0.4s, ease);
+			&:hover {
+				color: var(--main-color-one);
+			}
+		}
+	}
+	.widget {
+		margin-bottom: 48px;
+	}
+	&.style-two {
+		margin-top: 200px;
+	}
+}
+
+.subscribe-area {
+	background: $color-white;
+	box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.05);
+	border-radius: 10px;
+	padding: 90px 25px 100px 25px;
+	margin-bottom: 100px;
+	margin-top: -300px;
+	.rld-single-input {
+    	padding-right: 190px;
+	}
+	p {
+		margin-bottom: 42px;
+	}
+	input {
+		background: #E5E5E5;
+		border: 0 !important;
+		&::placeholder {
+			color: var(--heading-color);
+		}
+	}
+	button {
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	    height: 48px;
+	    border: 0;
+	    padding: 0 42px;
+	    font-weight: 600;
+	    background: var(--main-color-one);
+	    color: $color-white;
+	    cursor: pointer;
+	    border-radius: 4px;
+	}
+}

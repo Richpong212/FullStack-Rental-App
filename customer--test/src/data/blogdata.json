@@ -1,0 +1,107 @@
+{
+  "blogs": [
+    {
+      "title": "Major U.S. Metros Added 682 Million Feet of Office Space Over Last Decade",
+      "url": "/news-details",
+      "image": "assets/img/news/1.jpg",
+      "author": "Agent",
+      "authorimage": "assets/img/news/9.png",
+      "date": "17  hours ago",
+      "content": "According to real estate data provider Yardi Matrix, regionally across the U.S., the areas of growth were relatively distinct. Urban areas in the Pacific"
+    },
+    {
+      "title": "Stalled land delay causing acquisition in highway in projects Varanasi: NHAI",
+      "url": "/news-details",
+      "image": "assets/img/news/2.jpg",
+      "author": "Agent",
+      "authorimage": "assets/img/news/10.png",
+      "date": "17  hours ago",
+      "content": "According to real estate data provider Yardi Matrix, regionally across the U.S., the areas of growth were relatively distinct. Urban areas in the Pacific"
+    },
+    {
+      "title": "Centre appoints Ahmedabad's HCP Design for make over of Lutyens' Delhi",
+      "url": "/news-details",
+      "image": "assets/img/news/3.jpg",
+      "author": "Agent",
+      "authorimage": "assets/img/news/11.png",
+      "date": "17  hours ago",
+      "content": "According to real estate data provider Yardi Matrix, regionally across the U.S., the areas of growth were relatively distinct. Urban areas in the Pacific"
+    },
+    {
+      "title": "Metros Added 910 Million Feet of Office Space Over Last Decade",
+      "url": "/news-details",
+      "image": "assets/img/news/4.jpg",
+      "author": "Agent",
+      "authorimage": "assets/img/news/9.png",
+      "date": "17  hours ago",
+      "content": "According to real estate data provider Yardi Matrix, regionally across the U.S., the areas of growth were relatively distinct. Urban areas in the Pacific"
+    },
+    {
+      "title": "Added 682 Million Major Metros Feet of Office Space Over Last Decade",
+      "url": "/news-details",
+      "image": "assets/img/news/5.jpg",
+      "author": "Agent",
+      "authorimage": "assets/img/news/10.png",
+      "date": "17  hours ago",
+      "content": "According to real estate data provider Yardi Matrix, regionally across the U.S., the areas of growth were relatively distinct. Urban areas in the Pacific"
+    },
+    {
+      "title": "Space Over Last Decade Major U.S. Metros Added 682 Million Feet of Office",
+      "url": "/news-details",
+      "image": "assets/img/news/6.jpg",
+      "author": "Agent",
+      "authorimage": "assets/img/news/11.png",
+      "date": "17  hours ago",
+      "content": "According to real estate data provider Yardi Matrix, regionally across the U.S., the areas of growth were relatively distinct. Urban areas in the Pacific"
+    },
+    {
+      "title": "Major U.S. Metros Added 682 Million Feet of Office Space Over Last Decade",
+      "url": "/news-details",
+      "image": "assets/img/news/7.jpg",
+      "author": "Agent",
+      "authorimage": "assets/img/news/10.png",
+      "date": "17  hours ago",
+      "content": "According to real estate data provider Yardi Matrix, regionally across the U.S., the areas of growth were relatively distinct. Urban areas in the Pacific"
+    },
+    {
+      "title": "Brand New Residences Bring Modern Luxury Living to Paradise Island Bahamas",
+      "url": "/news-details",
+      "image": "assets/img/news/8.jpg",
+      "author": "Agent",
+      "authorimage": "assets/img/news/9.png",
+      "date": "17  hours ago",
+      "content": "According to real estate data provider Yardi Matrix, regionally across the U.S., the areas of growth were relatively distinct. Urban areas in the Pacific"
+    }
+   
+  ],
+  "popularpost": {
+    "title":"Popular Post",
+    "items":[
+       {
+        "title":"According to real estate data",
+        "url":"/news-details",
+        "image":"assets/img/popular-post/1.png",
+        "date":"December 25 2019"
+       },
+       {
+        "title":"According to real estate data",
+        "url":"/news-details",
+        "image":"assets/img/popular-post/1.png",
+        "date":"December 25 2019"
+       },
+       {
+        "title":"According to real estate data",
+        "url":"/news-details",
+        "image":"assets/img/popular-post/1.png",
+        "date":"December 25 2019"
+       },
+       {
+        "title":"According to real estate data",
+        "url":"/news-details",
+        "image":"assets/img/popular-post/1.png",
+        "date":"December 25 2019"
+       }
+    ]
+  }
+
+}

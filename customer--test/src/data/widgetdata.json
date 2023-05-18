@@ -1,0 +1,157 @@
+{
+  "search": {
+    "title": "Search"
+  },
+  "categorywidget": {
+    "title": "Category",
+    "listitems": [
+        {
+          "item":"Software",
+          "url":"/blog"
+        },
+        {
+          "item":"App Landing",
+          "url":"/blog"
+        },
+        {
+          "item":"Saas Landing",
+          "url":"/blog"
+        },
+        {
+          "item":"Design Studio",
+          "url":"/blog"
+        },
+        {
+          "item":"Product Showcase",
+          "url":"/blog"
+        },
+        {
+          "item":"Tech Company",
+          "url":"/blog"
+        },
+        {
+          "item":"Startup Company",
+          "url":"/blog"
+        },
+        {
+          "item":"Crypto Currency",
+          "url":"/blog"
+        }
+    ]
+  },
+  "archives": {
+    "title": "Archives",
+    "listitems": [
+        {
+          "item":"February 2019",
+          "url":"/blog"
+        },
+        {
+          "item":"March 2019",
+          "url":"/blog"
+        },
+        {
+          "item":"April 2019",
+          "url":"/blog"
+        },
+        {
+          "item":"May 2019",
+          "url":"/blog"
+        },
+        {
+          "item":"June 2019",
+          "url":"/blog"
+        }
+    ]
+  },
+  "latestposts": {
+    "title": "Recent Post",
+    "listitems": [
+        {
+          "title":"Best Technology Android Apps",
+          "image": "assets/img/blog/4.png",
+          "date": "August 29, 2019",
+          "url":"/blog-details"
+        },
+        {
+          "title":"Best 20 Tips For Technology",
+          "image": "assets/img/blog/5.png",
+          "date": "August 29, 2019",
+          "url":"/blog-details"
+        },
+        {
+          "title":"Top 20 Quotes On Technology",
+          "image": "assets/img/blog/6.png",
+          "date": "August 29, 2019",
+          "url":"/blog-details"
+        },
+        {
+          "title":"Top 10 Ways To Buy A Used Technology",
+          "image": "assets/img/blog/7.png",
+          "date": "August 29, 2019",
+          "url":"/blog-details"
+        }
+    ]
+  },
+  "tagscloud": {
+    "title": "Tags Cloud",
+    "listitems": [
+        {
+          "title":"Software",
+          "url":"/blog"
+        },
+        {
+          "title":"Agency",
+          "url":"/blog"
+        },
+        {
+          "title":"Creative",
+          "url":"/blog"
+        },
+        {
+          "title":"Startup",
+          "url":"/blog"
+        },
+        {
+          "title":"Marketing",
+          "url":"/blog"
+        },
+        {
+          "title":"Digital",
+          "url":"/blog"
+        }
+    ]
+  },
+  "gallery": {
+    "title": "Gallery Widget",
+    "listitems": [
+        {
+          "image_url": "assets/img/blog/4.png",
+          "url": "/blog"
+        },
+        {
+          "image_url": "assets/img/blog/5.png",
+          "url": "/blog"
+        },
+        {
+          "image_url": "assets/img/blog/6.png",
+          "url": "/blog"
+        },
+        {
+          "image_url": "assets/img/blog/7.png",
+          "url": "/blog"
+        },
+        {
+          "image_url": "assets/img/blog/8.png",
+          "url": "/blog"
+        },
+        {
+          "image_url": "assets/img/blog/9.png",
+          "url": "/blog"
+        }
+    ]
+  },
+  "newslatter": {
+    "title": "Newslatter"
+  }
+}

@@ -1,0 +1,95 @@
+/*----------------------------------------------
+    ## Banner
+----------------------------------------------*/
+.banner-inner-wrap {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+}
+.banner-inner-area {
+	position: relative;
+}
+.banner-inner {
+	.sub-title {
+		color: var(--paragraph-color);
+		margin-bottom: 22px;
+	}
+	.content {
+		margin-top: 20px;
+		margin-bottom: 0;
+	}
+	.banner-btn-wrap {
+		margin-top: 19px;
+	}
+	.btn {
+		height: 55px;
+		line-height: 55px;
+	}
+	.video-play-btn {
+		height: 55px;
+		width: 55px;
+		line-height: 52px;
+		text-align: center;
+		border-radius: 6px;
+		display: inline-block;
+		border: 2px solid #D4D4D4;
+		font-size: 20px;
+		color: var(--main-color-one);
+	}
+	.rld-banner-search {
+		margin-top: 33px;
+	}
+}
+.thumb-wrap {
+	position: absolute;
+	bottom: 0;
+}
+
+/******* banner tab style *****/
+.banner-area {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	.banner-search-wrap {
+		margin-top: 24px;
+	}
+}
+.rld-banner-tab {
+	border-bottom: 0;
+	.nav-item {
+		margin-bottom: 0;
+		a {
+    		border: 0;  
+    		border-radius: 5px 5px 0 0;
+    		height: 50px;
+    		line-height: 50px;
+    		padding: 0 35px;
+    		margin-right: 8px;
+    		position: relative;
+    		display: block;
+    		letter-spacing: 0.4px;
+    		background: rgba(255, 255, 255, 0.8);
+    		color: var(--heading-color);
+    		font-family: var(--heading-font);
+    		font-weight: 600;
+    		@include transition(all, 0.4s, ease);
+    		&:hover,
+    		&:focus,
+    		&.active {
+			    background: var(--main-color-one);
+			    color: $color-white;
+    		}
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+
+.navbar-area-3 {
+	background: $color-white;
+}
+.banner-search {
+	margin-top: 80px;
+}

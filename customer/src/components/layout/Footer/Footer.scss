@@ -1,0 +1,32 @@
+.footer {
+  background-color: #ebeef2;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
+  width: 100%;
+
+  // footer top
+  .footer-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 0.5px solid #cfd4db;
+  }
+
+  // footer bottom
+  .footer__bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+//colum styles
+.column__styles > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

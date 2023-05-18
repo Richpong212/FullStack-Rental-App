@@ -1,0 +1,39 @@
+.home {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  width: 100%;
+
+  span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(39, 35, 35);
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(3, 2, 2);
+  }
+
+  .search {
+    padding-top: 8rem;
+  }
+}
+
+// mdeia query
+@media (max-width: 768px) {
+  .home {
+    margin-top: 2rem;
+    padding-top: 1rem;
+
+    span {
+      font-size: 0.8rem;
+      color: rgb(39, 35, 35);
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: rgb(3, 2, 2);
+    }
+  }
+}

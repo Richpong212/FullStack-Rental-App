@@ -1,0 +1,91 @@
+/*---------------------------------------------
+    ## single-team
+---------------------------------------------*/
+.single-team {
+	box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.05);
+	border-radius: 10px;
+	overflow: hidden;
+	margin-bottom: 30px;
+	.thumb {
+		overflow: hidden;
+		img {
+			@include transition(all, 0.5s, ease);
+		}
+	}
+	.team-details {
+		padding: 24px 20px 24px 20px;
+		h4 {
+			margin-bottom: 5px;
+		}
+		p {
+			margin-bottom: 0;
+			float: left;
+		}
+		ul {
+			padding: 0;
+			display: block;
+			float: right;
+			li {
+				list-style: none;
+				display: inline-block;
+				padding-left: 5px;
+			}
+		}
+	}
+	&:hover {
+		.thumb {
+			img {
+				transform: scale(1.08);
+			}
+		}
+	}
+}
+
+
+/*---------------------------------------------
+    ## single-author
+---------------------------------------------*/
+.single-author {
+	box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.05);
+	border-radius: 10px;
+	margin-bottom: 30px;
+	padding: 40px 15px 36px 15px;
+	@include transition(all, 0.5s, ease);
+	.thumb {
+		margin-bottom: 15px;
+		img {
+			border-radius: 50%;
+		}
+	}
+	&.style-two {
+		.thumb {
+			border: 1px solid #FFEEE2;
+			display: inline-block;
+		    height: 140px;
+		    width: 140px;
+		    line-height: 135px;
+		    border-radius: 10px;
+ 			img {
+				border-radius: 0;
+			}
+		}
+	}
+	.author-details {
+		h4 {
+			margin-bottom: 5px;
+			font-weight: 500;
+		}
+		.view-more {
+			margin-bottom: 0;
+			font-weight: 600;
+			@include transition(all, 0.4s, ease);
+			&:hover {
+				color: var(--main-color-one);
+				text-decoration: underline;
+			}
+		}
+	}
+	&:hover {
+		box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
+	}
+}

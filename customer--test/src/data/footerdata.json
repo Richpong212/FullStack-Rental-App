@@ -1,0 +1,74 @@
+{
+  "footerlogo": "assets/img/footer-logo.png",
+  "footertext": "Our support team will get assistance from AI-powered, making it quicker than ever to handle support requests.",
+  "footerbg": "assets/img/bg/footer.png",
+  "socialicon": [
+    {
+      "icon": "fa fa-facebook",
+      "url": "https://www.facebook.com/codingeek.net/"
+    },
+    {
+      "icon": "fa fa-twitter",
+      "url": "https://twitter.com/codingeeknet"
+    },
+    {
+      "icon": "fa fa-linkedin",
+      "url": "https://www.linkedin.com/company/codingeek/about/"
+    }
+  ],
+  "copyrighttext": "  © Copyright Richpong Property Made With <i class=\"fa fa-heart\"></i><span> By CodeGenitor.</span></a>",
+  "popularserces": {
+    "title": "Popular Searches",
+    "links": [
+      {
+        "title": "Apartment for Rent",
+        "url": "/property-details"
+      },
+      {
+        "title": "Apartment Low to hide",
+        "url": "/property-details"
+      },
+      {
+        "title": "Offices for Buy",
+        "url": "/property-details"
+      },
+      {
+        "title": "Offices for Rent",
+        "url": "/property-details"
+      }
+    ]
+  },
+  "Homepress": {
+    "title": "Address",
+    "links": [
+      {
+        "title": "Awulewu Court",
+        "url": ""
+      },
+      {
+        "title": "Adjiringanor - East Legon"
+      }
+    ]
+  },
+  "quicklink": {
+    "title": "Quick Links",
+    "links": [
+      {
+        "title": "Pricing Plans",
+        "url": "/pricing"
+      },
+      {
+        "title": "FAQ",
+        "url": "/faq"
+      },
+      {
+        "title": "About Us",
+        "url": "/About"
+      },
+      {
+        "title": "Contact Us",
+        "url": "/contact"
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+/* --------------------------------------------------
+	##Blog / News 
+---------------------------------------------------- */
+.single-news {
+	border-radius: 10px;
+	box-shadow: $box-shadow;
+	overflow: hidden;
+	margin-bottom: 30px;
+	.thumb {
+
+	}
+	.details {
+		background: $color-white;
+		padding: 25px 30px 30px;
+		h4 {
+			a {
+				@include transition(all, 0.5s, ease);
+				&:hover {
+					color: var(--main-color-one);
+					text-decoration: underline;
+				}
+			}
+		}
+		p {
+		    margin-bottom: 25px;
+		}
+		.author {
+			img {
+				margin-right: 15px;
+				border-radius: 50%;
+			}
+			span {
+				font-size: 14px;
+				font-weight: 500;
+				font-family: var(--heading-font);
+			}
+			.date {
+				margin-left: 20px;
+			}
+		}
+	}
+}
+
+

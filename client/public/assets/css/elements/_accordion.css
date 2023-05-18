@@ -1,0 +1,58 @@
+/*----------------------------------------------
+    ## Accordion
+----------------------------------------------*/
+.single-accordion {
+  border: 1px solid #F5F9FF;
+  border-radius: 3px;
+  margin-bottom: 14px; }
+  .single-accordion .card-header {
+    background: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 0; }
+    .single-accordion .card-header h2 button {
+      font-size: 18px;
+      line-height: 30px;
+      letter-spacing: 0.32px;
+      padding: 0 0 0 37px;
+      width: 100%;
+      text-align: left;
+      position: relative;
+      background: #F5F9FF;
+      border-radius: 3px;
+      border: 0;
+      padding: 0 35px;
+      height: 60px;
+      line-height: 62px;
+      float: left;
+      font-weight: 500; }
+      .single-accordion .card-header h2 button:after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 12px;
+        top: 50%;
+        right: 30px; }
+      .single-accordion .card-header h2 button:before {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 12px;
+        top: 50%;
+        -webkit-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+        right: 30px; }
+      .single-accordion .card-header h2 button:hover, .single-accordion .card-header h2 button:focus, .single-accordion .card-header h2 button:active {
+        text-decoration: none; }
+      .single-accordion .card-header h2 button i {
+        float: right; }
+      .single-accordion .card-header h2 button.collapsed:before {
+        -webkit-transform: matrix(0, 1, -1, 0, 0, 0);
+        -ms-transform: matrix(0, 1, -1, 0, 0, 0);
+        transform: matrix(0, 1, -1, 0, 0, 0); }
+  .single-accordion .card-body {
+    padding: 21px 71px 23px 37px;
+    font-size: var(--body-font-size);
+    line-height: var(--line-height30);
+    letter-spacing: 0.3px; }
