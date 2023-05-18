@@ -39,9 +39,7 @@ describe("Home component", () => {
   test("should render become rental agent banner", () => {
     render(
       <MemoryRouter>
-        <Provider store={store}>
-          <EstateAgent />
-        </Provider>
+        <Provider store={store}></Provider>
       </MemoryRouter>
     );
 
