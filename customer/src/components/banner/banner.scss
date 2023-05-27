@@ -1,0 +1,57 @@
+$banner-color: rgb(253, 169, 79);
+
+//Estate Agent styles
+.estate__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 80%;
+    margin: 30px auto;
+    min-height: 12rem;
+    border: 1px;
+    padding:30px 30px;
+    border-radius: 5px; 
+    margin-top: 6rem; 
+    align-items: center;
+    background-color: "#ECA760"
+
+}
+
+// The text in the design
+.estateagent__text {
+    color: #fff;
+    margin-left: 1rem;
+    padding-top: 2rem;
+    align-self: center;
+}
+
+// The register now CTA
+.estateagent__registerbtn {
+    background-color: #fff;
+    color: rgb(253, 169, 79);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    align-self: center;
+    width: 70%;
+    margin-left: 3rem;
+    margin-right: 5rem;
+    padding: 1rem;
+    padding-right: 2rem;
+    font-weight: 600;
+   &:hover {
+     background-color: #fff;
+     color:rgb(253, 169, 79);
+   } 
+
+}
+
+.estatebannerbg__image {
+   
+   align-self: center;
+   width: 24;
+   height: 24;
+   fill: none;
+   
+    
+} 

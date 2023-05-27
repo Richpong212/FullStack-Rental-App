@@ -3,6 +3,7 @@ import "./Home.scss";
 import SearchBar from "../../components/search_bar/SearchBar";
 import FeaturedProperty from "../../components/featured-Property/Featured_Property";
 import AllProperties from "../../components/All-Properties/AllProperties";
+import EstateAgent from "../../components/banner/EstateAgent";
 
 const Home = () => {
   // background image
@@ -33,6 +34,7 @@ const Home = () => {
       </div>
       <FeaturedProperty />
       <AllProperties />
+      <EstateAgent />
     </div>
   );
 };
