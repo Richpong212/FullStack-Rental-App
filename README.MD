@@ -149,3 +149,13 @@ I would like to acknowledge the following open-source projects and resources tha
 - MongoDB
 - Material-UI
 - React Router
+
+---
+
+## Pushing to github Devs
+
+- git chekout -a
+- git checkout <branch name>
+- git add .
+- git commit -m updated
+- git push origin <branchname>
