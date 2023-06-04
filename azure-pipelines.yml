@@ -16,6 +16,16 @@ stages:
         steps:
           - bash: echo build Firstjob
           - bash: echo $(pipeline-variable)
+          - bash: echo $(System.DefaultWorkingDirectory)
+          - bash: echo $(Build.ArtifactStagingDirectory)
+          - bash: node --version
+          - task: CopyFiles@2
+            inputs:
+              SourceFolder: '$(System.DefaultWorkingDirectory)'
+              Contents: |
+                **/*yaml
+                **/*tf
+              TargetFolder: '$(Build.ArtifactStagingDirectory)'
       - job: secondJob
         steps:
           - bash: echo build secondJob
