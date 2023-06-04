@@ -67,29 +67,30 @@ The Rental Service App is a web application designed to facilitate the rental of
 
 ## Technologies Used
 
-Front-end: HTML, CSS,Scss, JavaScript, React.js, Typescript
-Back-end: Node.js, Express.js, Nodemailer,
-Operations: Linux, AWS & DevOps
-Database: MongoDB
-Authentication: JSON Web Tokens (JWT)
+- Front-end: HTML, CSS,Scss, JavaScript, React.js, Typescript
+- Back-end: Node.js, Express.js, Nodemailer,
+- Operations: Linux, AWS & DevOps
+- Database: MongoDB
+- Authentication: JSON Web Tokens (JWT)
 
 ## Installation
 
 - Clone the repository:
   git clone <https://github.com/Richpong212/FullStack-Rental-App.git>
 - Install dependencies:
-  cd api
-  yarn install
-  cd customer
-  yarn install
+
+  - cd api
+  - yarn install
+  - cd customer
+  - yarn install
 
 - Configure environment variables
-  SERVERPORT = PORT
-  MONGO_URI = DATABASEURL
-  AUTH_EMAIL = xxxx@mail.com
-  AUTH_EMAIL_PASSWORD = XXXX
-  CLIENT_URL = http://localhost:3000
-  JWT_SECRET = xxxxx
+  - SERVERPORT = PORT
+  - MONGO_URI = DATABASEURL
+  - AUTH_EMAIL = xxxx@mail.com
+  - AUTH_EMAIL_PASSWORD = XXXX
+  - CLIENT_URL = http://localhost:3000
+  - JWT_SECRET = xxxxx
 
 ## Usage
 
@@ -99,24 +100,27 @@ Authentication: JSON Web Tokens (JWT)
 2. cd rental-service-app/customer
    yarn install
 
-   cd ../api
-   yarn install
+cd ../api
+yarn install
 
-3. Configure the backend database connection by creating a .env file in the backend directory and providing the required environment variables.
-   SERVERPORT = PORT
-   MONGO_URI = DATABASEURL
-   AUTH_EMAIL = xxxx@mail.com
-   AUTH_EMAIL_PASSWORD = XXXX
-   CLIENT_URL = http://localhost:3000
-   JWT_SECRET = xxxxx
+1. Configure the backend database connection by creating a .env file in the backend directory and providing the required environment variables.
+
+- SERVERPORT = PORT
+- MONGO_URI = DATABASEURL
+- AUTH_EMAIL = xxxx@mail.com
+- AUTH_EMAIL_PASSWORD = XXXX
+- CLIENT_URL = http://localhost:3000
+- JWT_SECRET = xxxxx
 
 4. Start the backend server.
-   cd api
-   yarn start
+
+   - cd api
+   - yarn start
 
 5. Start frontend server
-   cd ../customer
-   yarn start
+
+   - cd ../customer
+   - yarn start
 
 6. configure .env for frontend
    REACT_APP_API = http://localhost:port/api
