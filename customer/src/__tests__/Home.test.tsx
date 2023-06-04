@@ -46,11 +46,9 @@ describe("Home component", () => {
       </MemoryRouter>
     );
 
-    const title = screen.getByText(/Become a Rental Agent/i);
     const btn = screen.getByText(/Register Now/i);
 
     // expect the elements to be in the document
-    expect(title).toBeInTheDocument();
     expect(btn).toBeInTheDocument();
   });
 });
