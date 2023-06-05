@@ -32,23 +32,28 @@ stages:
         steps:
           - bash: echo build secondJob
   - stage: Devdeploy
-    variables:
-      environment: Dev
-    dependsOn: build
     jobs:
       - job: Devdeploy
         steps:
           - bash: echo build Devdeploy
-          - bash: echo $(environment)
+      - deployment: DevDeloymentJob
+        environment: Dev
+        strategy:
+         runOnce:
+           deploy:
+             steps:
+               - script: echo deploy to dev
   - stage: QAdeploy
-    variables:
-      environment: Dev
-    dependsOn: build
     jobs:
       - job: QAdeploy
         steps:
           - bash: echo build QAdeploy
-          - bash: echo $(environment)
+      - deployment: 
+        strategy:
+         runOnce:
+           deploy:
+             steps:
+               - script: echo deploy to QAdeploy
   - stage: ProdDeploy
     variables:
       environment: Dev
