@@ -49,6 +49,7 @@ stages:
         steps:
           - bash: echo build QAdeploy
       - deployment: 
+        environment: QA
         strategy:
          runOnce:
            deploy:
