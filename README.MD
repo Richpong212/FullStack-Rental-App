@@ -69,7 +69,7 @@ The Rental Service App is a web application designed to facilitate the rental of
 
 - Front-end: HTML, CSS,Scss, JavaScript, React.js, Typescript
 - Back-end: Node.js, Express.js, Nodemailer,
-- Operations: Linux, AWS & DevOps
+- Operations: Linux, AWS & Azure DevOps
 - Database: MongoDB
 - Authentication: JSON Web Tokens (JWT)
 
@@ -155,7 +155,7 @@ I would like to acknowledge the following open-source projects and resources tha
 ## Pushing to github Devs
 
 - git chekout -a
-- git checkout <branch name>
+- git checkout branch name
 - git add .
 - git commit -m updated
 - git push origin <branchname>
