@@ -22,7 +22,6 @@ steps:
       commandOptions: '-var client_id = $(client_id) -var client_secret = $(client_secret) -var ssh_public_key = $(publickey)'
       backendType: 'azurerm'
       backendServiceArm: 'Azure subscription 1(c4b5b6eb-ba85-4066-875e-fda817282325)'
-      backendAzureRmSubscriptionId: 'c4b5b6eb-ba85-4066-875e-fda817282325'
       ensureBackend: true
       backendAzureRmResourceGroupName: 'terraform-backend-rg'
       backendAzureRmResourceGroupLocation: 'westeurope'
