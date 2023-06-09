@@ -31,3 +31,13 @@ steps:
       backendAzureRmContainerName: 'storagerichpongcontainer'
       backendAzureRmKey: 'kubernetes-dev.tfstate'
       allowTelemetryCollection: true
+      
+  - task: TerraformCLI@0
+    displayName: 'Initialize Terraform'
+    inputs:
+      command: 'apply'
+      workingDirectory: '$(System.DefaultWorkingDirectory)/IAAC/azure/kubernetes'
+      environmentServiceName: 'azure-resource-management-connection'
+      commandOptions: '-var client_id=97953ab5-4001-4910-8310-c5e84eabc7a8 -var client_secret=$(client_secret) -var ssh_public_key=$(publickey.secureFilePath)'
+      allowTelemetryCollection: true
+  
