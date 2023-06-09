@@ -34,7 +34,8 @@ steps:
   - task: TerraformCLI@0
     inputs:
       command: 'apply'
-      
+      environmentServiceName: 'Azure subscription 1(c4b5b6eb-ba85-4066-875e-fda817282325)'
+      allowTelemetryCollection: true
       
   
       
