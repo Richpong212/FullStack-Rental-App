@@ -15,30 +15,18 @@ steps:
     inputs:
       secureFile: 'azure_rsa.pub'
   
-  - task: AzureCLI@2
-    displayName: 'Azure CLI: Login'
-    inputs:
-      azureSubscription: 'Azure subscription 1'
-      scriptType: 'bash'
-      scriptLocation: 'inlineScript'
-      inlineScript: |
-        az login --service-principal --tenant e98b7f57-deb3-4cc3-ab63-807439e6cfe7 --username 97953ab5-4001-4910-8310-c5e84eabc7a8 --password sYd8Q~8kab_d1hrHg.WcjpZNJDElQgtumoPaUaLC
-
- 
   - task: TerraformCLI@0
-    displayName: 'Initialize Terraform'
     inputs:
       command: 'init'
       workingDirectory: '$(System.DefaultWorkingDirectory)/IAAC/azure/kubernetes'
-      commandOptions: '-backend-config="tenant_id=e98b7f57-deb3-4cc3-ab63-807439e6cfe7" \
-        -backend-config="subscription_id=c4b5b6eb-ba85-4066-875e-fda817282325" \
-        -backend-config="client_id=97953ab5-4001-4910-8310-c5e84eabc7a8" \
-        -backend-config="client_secret=sYd8Q~8kab_d1hrHg.WcjpZNJDElQgtumoPaUaLC" \
-        -backend-config="resource_group_name=terraform-rsg" \
-        -backend-config="storage_account_name=storageaccontrichpong" \
-        -backend-config="container_name=storageaccontrichpongcontainer" \
-        -backend-config="key=kubernetes-dev.tfstate"'
+      commandOptions: '-var client_id = $(client_id) -var client_secret = $(client_secret) -var ssh_public_key = $(publickey)'
       backendType: 'azurerm'
+      backendServiceArm: 'Azure subscription 1(c4b5b6eb-ba85-4066-875e-fda817282325)'
+      backendAzureRmSubscriptionId: 'c4b5b6eb-ba85-4066-875e-fda817282325'
       ensureBackend: true
+      backendAzureRmResourceGroupName: 'terraform-backend-rg'
+      backendAzureRmResourceGroupLocation: 'westeurope'
+      backendAzureRmStorageAccountName: 'storagerichpong'
+      backendAzureRmContainerName: 'storagerichpongcontainer'
+      backendAzureRmKey: 'kubernetes-dev.tfstate'
       allowTelemetryCollection: true
-    continueOnError: true
