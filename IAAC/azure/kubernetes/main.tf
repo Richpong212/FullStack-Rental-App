@@ -7,12 +7,6 @@ terraform {
   }
 }
 
-features {
-    provider_block {
-      use_new_syntax = true
-    }
-}
-
 resource "azurerm_resource_group" "resource_group" {
     name     = "${var.resource_group}_${var.environment}"
     location = var.location
