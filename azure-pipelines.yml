@@ -16,12 +16,14 @@ steps:
       secureFile: 'azure_rsa.pub'
   
   - task: TerraformCLI@0
+    displayName: 'Initialize Terraform'
     inputs:
       command: 'init'
       workingDirectory: '$(System.DefaultWorkingDirectory)/IAAC/azure/kubernetes'
-      commandOptions: '-var client_id = $(client_id) -var client_secret = $(client_secret) -var ssh_public_key = $(publickey)'
+      commandOptions: '-var client_id=97953ab5-4001-4910-8310-c5e84eabc7a8 -var client_secret=$(client_secret) -var ssh_public_key=$(publickey.secureFilePath)'
       backendType: 'azurerm'
       backendServiceArm: 'Azure subscription 1(c4b5b6eb-ba85-4066-875e-fda817282325)'
+      backendAzureRmSubscriptionId: 'c4b5b6eb-ba85-4066-875e-fda817282325'
       ensureBackend: true
       backendAzureRmResourceGroupName: 'terraform-backend-rg'
       backendAzureRmResourceGroupLocation: 'westeurope'
