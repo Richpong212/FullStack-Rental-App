@@ -14,6 +14,15 @@ steps:
     inputs:
       secureFile: 'azure_rsa.pub'
 
+  - task: AzureCLI@2
+    displayName: 'Azure Login'
+    inputs:
+      azureSubscription: 'c4b5b6eb-ba85-4066-875e-fda817282325'
+      scriptType: 'bash'
+      scriptLocation: 'inlineScript'
+      inlineScript: |
+        az login --service-principal --tenant e98b7f57-deb3-4cc3-ab63-807439e6cfe7 --username codegenitor --password DORIRA123@1
+
   - task: TerraformCLI@0
     displayName: 'Initialize Terraform'
     inputs:
