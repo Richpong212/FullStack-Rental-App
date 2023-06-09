@@ -6,63 +6,26 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-stages:
-  - stage: build
-    jobs:
-      - job: Firstjob
-        steps:
-          - bash: echo build Firstjob
-          - bash: echo $(pipeline-variable)
-          - bash: echo $(System.DefaultWorkingDirectory)
-          - bash: echo $(Build.ArtifactStagingDirectory)
-          - bash: node --version
-          - task: CopyFiles@2
-            inputs:
-              SourceFolder: '$(System.DefaultWorkingDirectory)'
-              Contents: |
-                **/*yaml
-                **/*tf
-              TargetFolder: '$(Build.ArtifactStagingDirectory)'
-          - task: PublishBuildArtifacts@1
-            inputs:
-              PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-              ArtifactName: 'drop'
-              publishLocation: 'Container'
-      - job: secondJob
-        steps:
-          - bash: echo build secondJob
-  - stage: Devdeploy
-    jobs:
-      - job: Devdeploy
-        steps:
-          - bash: echo build Devdeploy
-      - deployment: DevDeloymentJob
-        environment: Dev
-        strategy:
-         runOnce:
-           deploy:
-             steps:
-               - script: echo deploy to dev
-  - stage: QAdeploy
-    jobs:
-      - job: QAdeploy
-        steps:
-          - bash: echo build QAdeploy
-      - deployment: 
-        environment: QA
-        strategy:
-         runOnce:
-           deploy:
-             steps:
-               - script: echo deploy to QAdeploy
-  - stage: ProdDeploy
-    variables:
-      environment: Dev
-    dependsOn: 
-    - Devdeploy
-    - QAdeploy
-    jobs:
-      - job: ProdDeploy
-        steps:
-          - bash: echo build ProdDeploy
-          - bash: echo $(environment)
+steps:
+  - script: echo "Running k8s Terraform script"
+    displayName: 'Run one-line script'
+  - task: DownloadSecureFile@1
+    name: publickey
+    inputs:
+      secureFile: 'azure_rsa.pub'
+
+  - task: TerraformCLI@0
+    displayName: 'Initialize Terraform'
+    inputs:
+      command: 'init'
+      workingDirectory: '$(System.DefaultWorkingDirectory)/IAAC/azure/kubernetes'
+      commandOptions: '-var client_id = $(client_id) -var client_secret = $client_secret) -var ssh_public_key = $(publickey.secureFilePath)'
+      backendType: 'azurerm'
+      ensureBackend: true
+      backendAzureRmResourceGroupName: 'terraform-rsg'
+      backendAzureRmResourceGroupLocation: 'westeurope'
+      backendAzureRmStorageAccountName: 'storageaccontrichpong'
+      backendAzureRmContainerName: 'storageaccontrichpongcontainer'
+      backendAzureRmKey: 'kubernetes-dev.tfstate'
+      allowTelemetryCollection: true
+    continueOnError: true
