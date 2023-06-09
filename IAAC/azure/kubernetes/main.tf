@@ -5,12 +5,6 @@ terraform {
       version = ">= 2.0"
     }
   }
-
-  features {
-    provider_block {
-      use_new_syntax = true
-    }
-  }
 }
 
 resource "azurerm_resource_group" "resource_group" {
