@@ -27,7 +27,7 @@ resource "azurerm_kubernetes_cluster" "terraform-k8s" {
         }
     }
 
-    feeature {
+    feature {
         azure_policy {}
     }
 
