@@ -27,9 +27,6 @@ resource "azurerm_kubernetes_cluster" "terraform-k8s" {
         }
     }
 
-    feature {
-        azure_policy {}
-    }
 
     default_node_pool {
         name       = "agentpool"
