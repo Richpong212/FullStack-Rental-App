@@ -22,11 +22,4 @@ steps:
 
   
 # terraform apply
-- task: TerraformTaskV4@4
-  displayName: 'Terraform apply'
-  inputs:
-    provider: 'aws'
-    command: 'apply'
-    workingDirectory: '(System.DefaultWorkingDirectory)/IAAC/aws/kubernetes'
-    environmentServiceNameAWS: 'aws-for-terraform'
 
