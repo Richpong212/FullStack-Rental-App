@@ -18,6 +18,24 @@ steps:
     backendServiceAWS: 'aws-for-terraform'
     backendAWSBucketName: 'codegenitor-terraform-backend-state-aws'
     backendAWSKey: 'kubernetes-dev.tfstate'
+    
+- task: TerraformTaskV4@4
+  displayName: 'Terraform Validate'
+  inputs:
+    provider: 'aws'
+    command: 'validate'
+    workingDirectory: '(System.DefaultWorkingDirectory)/IAAC/aws/kubernetes'
+    backendAWSBucketName: 
+
+- task: TerraformTaskV4@4
+  displayName: 'Terraform validate'
+  inputs:
+    provider: 'aws'
+    command: 'apply'
+    workingDirectory: '(System.DefaultWorkingDirectory)/IAAC/aws/kubernetes'
+    environmentServiceNameAWS: 'aws-for-terraform'
+
+
 
 
 
