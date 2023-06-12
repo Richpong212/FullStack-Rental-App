@@ -1,7 +1,18 @@
 # Needed to set the default region
-provider "aws" {
-  region  = "us-east-1"
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 3.0"
+      region  = "us-east-1"
+    }
+    kubernetes = {
+      source  = "hashicorp/kubernetes"
+      version = "~> 2.0"
+    }
+  }
 }
+
 
 resource "aws_default_vpc" "default" {
   
