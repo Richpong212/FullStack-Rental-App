@@ -2,13 +2,19 @@
 # AKIA55C5Z7XFB2LRQ2KR.  -aws access key id
 # subnet-0b12d33e10affbbcf - subnet id
 
-terraform {
-   backend "s3" {
-    profile = "default"
-     bucket = "codegenitor-terraform-backend-state-aws" # Replace with your bucket name
-     key    = "aws-terraform-k8s" # Replace with your bucket key
-     region = "us-east-1"
-   }
+#terraform {
+#   backend "s3" {
+#    profile = "default"
+#     bucket = "codegenitor-terraform-backend-state-aws" # Replace with your bucket name
+#     region = "us-east-1"
+#   }
+#}
+# Needed to set the default region
+provider "aws" {
+  region  = "us-east-1"
+  profile = "default"
+  access_key = "AKIA55C5Z7XFB2LRQ2KR"
+  secret_key = "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"
 }
 
 resource "aws_default_vpc" "default" {
@@ -54,7 +60,3 @@ module "richpong-cluster" {
   }
 }
 
-# Needed to set the default region
-provider "aws" {
-  region  = "us-east-1"
-}
