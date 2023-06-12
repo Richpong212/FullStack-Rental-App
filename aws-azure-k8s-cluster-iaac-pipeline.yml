@@ -22,4 +22,8 @@ steps:
 
   
 # terraform apply
+- task: TerraformTaskV4@4
+  inputs:
+    provider: 'aws'
+    command: 'apply'
 
