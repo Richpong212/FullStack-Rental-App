@@ -1,7 +1,6 @@
 # Needed to set the default region
 provider "aws" {
   region  = "us-east-1"
-  profile = "default"
 }
 
 resource "aws_default_vpc" "default" {
