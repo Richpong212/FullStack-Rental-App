@@ -8,7 +8,7 @@ resource "aws_default_vpc" "default" {
   
 }
 
-data "aws_subnet_ids" "subnets" {
+data "aws_subnet" "subnets" {
   vpc_id = aws_default_vpc.default.id
 }
 
@@ -24,6 +24,7 @@ module "richpong-cluster" {
   source            = "terraform-aws-modules/eks/aws"
   cluster_name      = "richpong-cluster"
   cluster_version   = "1.23"
+  subnets           = data.aws_subnet.subnets.ids
   vpc_id            = aws_default_vpc.default.id
   cluster_endpoint_public_access = true
 
