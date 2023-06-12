@@ -2,13 +2,13 @@
 # AKIA55C5Z7XFB2LRQ2KR.  -aws access key id
 # subnet-0b12d33e10affbbcf - subnet id
 
-terraform {
-  backend "s3" {
-    profile = "default"
-    bucket = "codegenitor-terraform-backend-state-aws" # Replace with your bucket name
-    region = "us-east-1"
-  }
-}
+#terraform {
+#  backend "s3" {
+#    profile = "default"
+#    bucket = "codegenitor-terraform-backend-state-aws" # Replace with your bucket name
+#    region = "us-east-1"
+#  }
+#}
 
 # Needed to set the default region
 provider "aws" {
