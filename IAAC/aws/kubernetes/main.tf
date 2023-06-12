@@ -2,18 +2,18 @@
 # AKIA55C5Z7XFB2LRQ2KR.  -aws access key id
 # subnet-0b12d33e10affbbcf - subnet id
 
-#terraform {
-#   backend "s3" {
-#    profile = "default"
-#     bucket = "codegenitor-terraform-backend-state-aws" # Replace with your bucket name
-#     region = "us-east-1"
-#   }
-#}
+terraform {
+  backend "s3" {
+    profile = "default"
+    bucket = "codegenitor-terraform-backend-state-aws" # Replace with your bucket name
+    region = "us-east-1"
+  }
+}
+
 # Needed to set the default region
 provider "aws" {
   region  = "us-east-1"
   profile = "default"
-
 }
 
 resource "aws_default_vpc" "default" {
@@ -37,9 +37,8 @@ module "richpong-cluster" {
   source = "terraform-aws-modules/eks/aws"
   cluster_name = "richpong-cluster"
   cluster_version = "1.23"
-  subnets = ["subnet-0b12d33e10affbbcf","subnet-0a1df796a0109377e"]
+  subnets = data.aws_subnet_ids.subnets.ids
   vpc_id = aws_default_vpc.default.id
-
   cluster_endpoint_public_access  = true
 
   # EKS Managed Node Group(s)
