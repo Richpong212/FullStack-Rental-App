@@ -28,7 +28,7 @@ steps:
     backendAWSBucketName: 
 
 - task: TerraformTaskV4@4
-  displayName: 'Terraform validate'
+  displayName: 'Terraform apply'
   inputs:
     provider: 'aws'
     command: 'apply'
