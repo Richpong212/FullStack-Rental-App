@@ -159,3 +159,11 @@ I would like to acknowledge the following open-source projects and resources tha
 - git add .
 - git commit -m updated
 - git push origin <branchname>
+
+## checking which files channges before pushin to github
+
+- git pull
+- git status
+- git add .
+- git commit -m "updating subnets"
+- git push -u origin main

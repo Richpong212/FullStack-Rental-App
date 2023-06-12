@@ -1,11 +1,11 @@
-# hjem-rentalservice
+# codegenitor-terraform-backend-state-aws
 # AKIA55C5Z7XFB2LRQ2KR.  -aws access key id
 # subnet-0b12d33e10affbbcf - subnet id
 
 terraform {
    backend "s3" {
-     bucket = "mybucket" # Replace with your bucket name
-     key    = "path/to/my/key" # Replace with your bucket key
+     bucket = "codegenitor-terraform-backend-state-aws" # Replace with your bucket name
+     key    = "aws-terraform-k8s	" # Replace with your bucket key
      region = "us-east-1" # Replace with your bucket region
    }
 }
