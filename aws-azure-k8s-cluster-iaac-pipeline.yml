@@ -21,10 +21,10 @@ steps:
     backendAWSKey: 'kubernetes-dev.tfstate'
 
   
-# terraform apply
 - task: TerraformTaskV4@4
   inputs:
     provider: 'aws'
     command: 'apply'
     environmentServiceNameAWS: 'aws-for-terraform'
+
 
