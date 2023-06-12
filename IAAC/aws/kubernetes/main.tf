@@ -4,11 +4,10 @@
 
 terraform {
    backend "s3" {
+    profile = "default"
      bucket = "codegenitor-terraform-backend-state-aws" # Replace with your bucket name
      key    = "aws-terraform-k8s" # Replace with your bucket key
      region = "us-east-1"
-     accessecret_key = "AKIA55C5Z7XFB2LRQ2KR"
-     secret_key = "iDcr7gZGbutb5VnhpWvM8N5khUCv+QIYuINkbjAm" # Replace with your bucket region
    }
 }
 
