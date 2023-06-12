@@ -22,12 +22,6 @@ steps:
     backendAWSKey: 'kubernetes-dev.tfstate'
 
   
-- task: TerraformTaskV4@4
-  displayName: 'Terraform Apply'
-  inputs:
-    provider: 'aws'
-    command: 'apply'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/IAAC/aws/kubernetes'
-    environmentServiceNameAWS: 'aws-for-terraform'
+
 
 
