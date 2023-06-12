@@ -4,7 +4,6 @@ terraform {
     aws = {
       source  = "hashicorp/aws"
       version = "~> 3.0"
-      region  = "us-east-1"
     }
     kubernetes = {
       source  = "hashicorp/kubernetes"
@@ -12,7 +11,9 @@ terraform {
     }
   }
 }
-
+provider "aws" {
+  region  = "us-east-1"
+}
 
 resource "aws_default_vpc" "default" {
   
