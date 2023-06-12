@@ -25,7 +25,6 @@ steps:
     provider: 'aws'
     command: 'validate'
     workingDirectory: '(System.DefaultWorkingDirectory)/IAAC/aws/kubernetes'
-    backendAWSBucketName: 
 
 - task: TerraformTaskV4@4
   displayName: 'Terraform apply'
