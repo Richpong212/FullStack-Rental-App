@@ -12,6 +12,7 @@ steps:
 
  # terraform init 
 - task: TerraformTaskV4@4
+  displayName: 'Terraform Init' 
   inputs:
     provider: 'aws'
     command: 'init'
@@ -22,9 +23,11 @@ steps:
 
   
 - task: TerraformTaskV4@4
+  displayName: 'Terraform Apply'
   inputs:
     provider: 'aws'
     command: 'apply'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/IAAC/aws/kubernetes'
     environmentServiceNameAWS: 'aws-for-terraform'
 
 
