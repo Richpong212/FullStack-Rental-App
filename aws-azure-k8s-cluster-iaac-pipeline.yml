@@ -18,18 +18,14 @@ steps:
     backendServiceAWS: 'aws-for-terraform'
     backendAWSBucketName: 'codegenitor-terraform-backend-state-aws'
     backendAWSKey: 'kubernetes-dev.tfstate'
-    
+
+   # terraform init 
 - task: TerraformTaskV4@4
   displayName: 'Terraform apply'
   inputs:
     provider: 'aws'
     command: 'apply'
-    workingDirectory: '(System.DefaultWorkingDirectory)/IAAC/aws/kubernetes/main.tf'
+    workingDirectory: '(System.DefaultWorkingDirectory)/IAAC/aws/kubernetes'
     environmentServiceNameAWS: 'aws-for-terraform'
 
-
-
-
-
-# terraform init
 # terraform apply
