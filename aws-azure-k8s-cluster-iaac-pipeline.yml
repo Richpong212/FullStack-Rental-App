@@ -26,4 +26,5 @@ steps:
   inputs:
     provider: 'aws'
     command: 'apply'
+    environmentServiceNameAWS: 'aws-for-terraform'
 
