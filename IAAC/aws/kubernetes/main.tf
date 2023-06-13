@@ -9,16 +9,32 @@ terraform {
     }
   }
 
-  backend "s3" {
-    profile = "default"
-    bucket  = "codegenitor-terraform-backend-state-aws" # Replace with your bucket name
-    region  = "us-east-1"
-    key     = "terraform.tfstate"
-  }
+#  backend "s3" {
+#    profile = "default"
+#    bucket  = "codegenitor-terraform-backend-state-aws" # Replace with your bucket name
+#    region  = "us-east-1"
+#    key     = "terraform.tfstate"
+#  }
+
 }
 provider "aws" {
   region  = "us-east-1"
 }
+
+resource "aws_s3_bucket" "ricpong-terraform-backend-state-aws" {
+  bucket = "ricpong-terraform-backend-state-aws"
+  acl    = "private"
+  versioning {
+    enabled = true
+  }
+  
+  tags = {
+    Name        = "ricpong-terraform-backend-state-aws"
+    Environment = "dev"
+  }
+}
+  
+
 
 resource "aws_default_vpc" "default" {
   
