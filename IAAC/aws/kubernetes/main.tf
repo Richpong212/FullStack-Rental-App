@@ -68,7 +68,7 @@ module "richpong-cluster-eks" {
 }
 
 resource "aws_kms_alias" "unique_kms_alias" {
-  name          = "unique-kms-alias"
+  name          = "alias/unique-kms-alias"
   target_key_id = module.richpong-cluster-eks.kms_key_arn
 }
 
