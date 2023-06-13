@@ -1,78 +1,71 @@
-# Needed to set the default region
 terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-    }
-    kubernetes = {
-      source  = "hashicorp/kubernetes"
-    }
+  backend "s3" {
+    bucket = "mybucket" # Will be overridden from build
+    key    = "path/to/my/key" # Will be overridden from build
+    region = "us-east-1"
   }
-
-#  backend "s3" {
-#    profile = "default"
-#    bucket  = "codegenitor-terraform-backend-state-aws" # Replace with your bucket name
-#    region  = "us-east-1"
-#    key     = "terraform.tfstate"
-#  }
-
 }
-provider "aws" {
-  region  = "us-east-1"
-}
-
-
-  
-
 
 resource "aws_default_vpc" "default" {
-  
+
 }
 
-data "aws_subnet" "subnets" {
+data "aws_subnet_ids" "subnets" {
   vpc_id = aws_default_vpc.default.id
-  availability_zone = "us-east-1a"
 }
 
 provider "kubernetes" {
   //>>Uncomment this section once EKS is created - Start
-  # host                   = data.aws_eks_cluster.cluster.endpoint #module.in28minutes-cluster.cluster_endpoint
-  # cluster_ca_certificate = base64decode(data.aws_eks_cluster.cluster.certificate_authority[0].data)
-  # token                  = data.aws_eks_cluster_auth.cluster.token
+  //host                   = data.aws_eks_cluster.cluster.endpoint #module.in28minutes-cluster.cluster_endpoint
+  //cluster_ca_certificate = base64decode(data.aws_eks_cluster.cluster.certificate_authority[0].data)
+  //token                  = data.aws_eks_cluster_auth.cluster.token
   //>>Uncomment this section once EKS is created - End
 }
 
 module "richpong-cluster-eks" {
- 
   source            = "terraform-aws-modules/eks/aws"
   cluster_name      = "richpong-cluster"
-  cluster_version   = "1.23"
-  vpc_id            = aws_default_vpc.default.id
-  cluster_endpoint_public_access = true
+  cluster_version = "1.23"
+  vpc_id          = aws_default_vpc.default.id
 
-  # EKS Managed Node Group(s)
+  //Newly added entry to allow connection to the api server
+  //Without this change error in step 163 in course will not go away
+  cluster_endpoint_public_access  = true
+
+# EKS Managed Node Group(s)
   eks_managed_node_group_defaults = {
-   # instance_types = ["t2.small", "t2.medium"]
+   // instance_types = ["t2.small", "t2.medium"]
   }
 
   eks_managed_node_groups = {
-   # blue = {}
-   # green = {
-   #   min_size       = 1
-   #   max_size       = 10
-    #  desired_size   = 1
-    #  instance_types = ["t2.medium"]
-   # }
+  //  blue = {}
+  //  green = {
+  //    min_size     = 1
+  //    max_size     = 10
+  //    desired_size = 1
+
+   //   instance_types = ["t2.medium"]
+  //  }
   }
-  subnet_ids = ["subnet-0b12d33e10affbbcf","subnet-0a1df796a0109377e"]
 }
 
-resource "aws_kms_alias" "this" {
-  name          = "alias/my-unique-alias-richpong"
-  target_key_id = module.richpong-cluster-eks.kms_key_arn
+//>>Uncomment this section once EKS is created - Start
+ data "aws_eks_cluster" "cluster" {
+   name = "in28minutes-cluster" #module.in28minutes-cluster.cluster_name
+ }
+
+data "aws_eks_cluster_auth" "cluster" {
+  name = "in28minutes-cluster" #module.in28minutes-cluster.cluster_name
 }
 
-resource "aws_cloudwatch_log_group" "this" {
-  name              = "/aws/eks/my-unique-log-group"
-  retention_in_days = 30
+
+# We will use ServiceAccount to connect to K8S Cluster in CI/CD mode
+# ServiceAccount needs permissions to create deployments 
+# and services in default namespace
+
+//>>Uncomment this section once EKS is created - End
+
+# Needed to set the default region
+provider "aws" {
+  region  = "us-east-1"
 }
