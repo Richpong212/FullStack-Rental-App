@@ -62,4 +62,5 @@ module "richpong-cluster" {
       instance_types = ["t2.medium"]
     }
   }
+  subnet_ids = ["subnet-0b12d33e10affbbcf","subnet-0a1df796a0109377e"]
 }
