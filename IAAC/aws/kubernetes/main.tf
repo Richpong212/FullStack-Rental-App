@@ -67,12 +67,12 @@ module "richpong-cluster-eks" {
   subnet_ids = ["subnet-0b12d33e10affbbcf","subnet-0a1df796a0109377e"]
 }
 
-resource "aws_kms_alias" "unique_kms_alias" {
-  name          = "alias/richppong-unique-kms-alias"
+resource "aws_kms_alias" "this" {
+  name          = "my-unique-alias-richpong"
   target_key_id = module.richpong-cluster-eks.kms_key_arn
 }
 
-resource "aws_cloudwatch_log_group" "unique_log_group" {
-  name              = "/aws/eks/richpong-unique-log-group"
+resource "aws_cloudwatch_log_group" "this" {
+  name              = "/aws/eks/my-unique-log-group"
   retention_in_days = 30
 }
