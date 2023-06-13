@@ -24,5 +24,10 @@ steps:
       provider: 'aws'
       command: 'validate'
       workingDirectory: '$(System.DefaultWorkingDirectory)/IAAC/aws/kubernetes'
-
- 
+  
+  - task: TerraformTaskV4@4
+    inputs:
+      provider: 'aws'
+      command: 'apply'
+      workingDirectory: '$(System.DefaultWorkingDirectory)/IAAC/aws/kubernetes'
+      environmentServiceNameAWS: 'aws-for-terraform'
