@@ -68,11 +68,11 @@ module "richpong-cluster-eks" {
 }
 
 resource "aws_kms_alias" "unique_kms_alias" {
-  name          = "alias/unique-kms-alias"
+  name          = "alias/richppong-unique-kms-alias"
   target_key_id = module.richpong-cluster-eks.kms_key_arn
 }
 
 resource "aws_cloudwatch_log_group" "unique_log_group" {
-  name              = "/aws/eks/unique-log-group"
+  name              = "/aws/eks/richpong-unique-log-group"
   retention_in_days = 30
 }
