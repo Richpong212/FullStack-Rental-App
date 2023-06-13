@@ -51,17 +51,17 @@ module "richpong-cluster" {
 
   # EKS Managed Node Group(s)
   eks_managed_node_group_defaults = {
-    instance_types = ["t2.small", "t2.medium"]
+   # instance_types = ["t2.small", "t2.medium"]
   }
 
   eks_managed_node_groups = {
-    blue = {}
-    green = {
-      min_size       = 1
-      max_size       = 10
-      desired_size   = 1
-      instance_types = ["t2.medium"]
-    }
+   # blue = {}
+   # green = {
+   #   min_size       = 1
+   #   max_size       = 10
+    #  desired_size   = 1
+    #  instance_types = ["t2.medium"]
+   # }
   }
   subnet_ids = ["subnet-0b12d33e10affbbcf","subnet-0a1df796a0109377e"]
 }
