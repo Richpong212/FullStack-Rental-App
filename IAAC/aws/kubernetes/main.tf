@@ -53,6 +53,6 @@ module "richpong-cluster-eks" {
     // }
   }
 
-  control_plane_subnet_ids = data.aws_subnet.subnets.id
-  subnet_ids               = data.aws_subnet.subnets.id
+  control_plane_subnet_ids = [data.aws_subnet.subnets.id]
+  subnet_ids               = [data.aws_subnet.subnets.id]
 }
