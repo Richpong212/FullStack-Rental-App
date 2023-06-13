@@ -31,6 +31,7 @@ resource "aws_default_vpc" "default" {
 
 data "aws_subnet" "subnets" {
   vpc_id = aws_default_vpc.default.id
+  availability_zone = "us-east-1a"
 }
 
 provider "kubernetes" {
