@@ -9,6 +9,12 @@ terraform {
     }
   }
 
+#  backend "s3" {
+#    profile = "default"
+#    bucket  = "codegenitor-terraform-backend-state-aws" # Replace with your bucket name
+#    region  = "us-east-1"
+#    key     = "terraform.tfstate"
+#  }
 
 }
 provider "aws" {
@@ -37,6 +43,7 @@ provider "kubernetes" {
 }
 
 module "richpong-cluster-eks" {
+ 
   source            = "terraform-aws-modules/eks/aws"
   cluster_name      = "richpong-cluster"
   cluster_version   = "1.23"
@@ -58,4 +65,14 @@ module "richpong-cluster-eks" {
    # }
   }
   subnet_ids = ["subnet-0b12d33e10affbbcf","subnet-0a1df796a0109377e"]
+}
+
+resource "aws_kms_alias" "unique_kms_alias" {
+  name          = "unique-kms-alias"
+  target_key_id = module.richpong-cluster-eks.kms_key_arn
+}
+
+resource "aws_cloudwatch_log_group" "unique_log_group" {
+  name              = "/aws/eks/unique-log-group"
+  retention_in_days = 30
 }
