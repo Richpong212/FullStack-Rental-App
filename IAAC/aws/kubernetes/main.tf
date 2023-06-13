@@ -26,6 +26,7 @@ module "richpong-cluster-eks" {
   source            = "terraform-aws-modules/eks/aws"
   cluster_name      = "richpong-cluster"
   cluster_version = "1.23"
+  subnets         = ["subnet-0b12d33e10affbbcf","subnet-0a1df796a0109377e"] #CHANGE # Donot choose subnet from us-east-1e
   vpc_id          = aws_default_vpc.default.id
 
   //Newly added entry to allow connection to the api server
