@@ -46,6 +46,7 @@ module "richpong-cluster" {
   cluster_name      = "richpong-cluster"
   cluster_version   = "1.23"
   vpc_id            = aws_default_vpc.default.id
+  subnets           = data.aws_subnet.subnets.ids
   cluster_endpoint_public_access = true
 
   # EKS Managed Node Group(s)
