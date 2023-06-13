@@ -20,8 +20,4 @@ module "richpong-cluster-eks" {
     # }
   }
 
-  vpc_subnets = [
-    aws_subnet.subnets[0].id,
-    aws_subnet.subnets[1].id
-  ]
 }
