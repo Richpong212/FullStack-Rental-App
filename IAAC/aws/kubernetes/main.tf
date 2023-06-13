@@ -9,12 +9,6 @@ terraform {
     }
   }
 
-#  backend "s3" {
-#    profile = "default"
-#    bucket  = "codegenitor-terraform-backend-state-aws" # Replace with your bucket name
-#    region  = "us-east-1"
-#    key     = "terraform.tfstate"
-#  }
 
 }
 provider "aws" {
