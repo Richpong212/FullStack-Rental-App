@@ -42,7 +42,7 @@ provider "kubernetes" {
   //>>Uncomment this section once EKS is created - End
 }
 
-module "richpong-cluster" {
+module "richpong-cluster-eks" {
   source            = "terraform-aws-modules/eks/aws"
   cluster_name      = "richpong-cluster"
   cluster_version   = "1.23"
