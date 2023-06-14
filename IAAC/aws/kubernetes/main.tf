@@ -30,11 +30,6 @@ data "aws_subnet" "subnets" {
   availability_zone = "us-east-1a"
 }
 
-data "aws_cloudwatch_log_group" "existing_log_group" {
-  name = "/aws/eks/richpong-cluster/cluster"
-  
-}
-
 provider "kubernetes" {
   // Uncomment this section once EKS is created
   // host                   = data.aws_eks_cluster.cluster.endpoint #module.in28minutes-cluster.cluster_endpoint
