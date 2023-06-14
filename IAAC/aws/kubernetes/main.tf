@@ -8,6 +8,11 @@ terraform {
       source  = "hashicorp/kubernetes"
     }
   }
+  backend "s3" {
+    bucket = "richpong-terraform-state"
+    key    = "terraform.tfstate"
+    region = "us-east-1"
+  }
 }
 
 provider "aws" {
@@ -53,11 +58,8 @@ module "richpong-cluster-eks" {
     // }
   }
 
-  # Disable the creation of KMS Alias
-  kms_enabled = false
+ 
 
-  # Disable the creation of CloudWatch Logs Log Group
-  cloudwatch_logs_enabled = false
 
   control_plane_subnet_ids = [data.aws_subnet.subnets.id]
   subnet_ids               = [data.aws_subnet.subnets.id]
