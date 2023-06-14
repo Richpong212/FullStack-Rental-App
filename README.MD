@@ -160,7 +160,7 @@ I would like to acknowledge the following open-source projects and resources tha
 - git commit -m updated
 - git push origin <branchname>
 
-## checking which files channges before pushin to github
+## checking which files changes before pushing to github
 
 - git pull
 - git status
