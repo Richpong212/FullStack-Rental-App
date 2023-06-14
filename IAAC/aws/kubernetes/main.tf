@@ -30,8 +30,9 @@ data "aws_subnet" "subnets" {
   availability_zone = "us-east-1a"
 }
 
-data "aws_cloudwatch_log_group" "/aws/eks/richpong-cluster/cluster" {
+data "aws_cloudwatch_log_group" "existing_log_group" {
   name = "/aws/eks/richpong-cluster/cluster"
+  
 }
 
 provider "kubernetes" {
