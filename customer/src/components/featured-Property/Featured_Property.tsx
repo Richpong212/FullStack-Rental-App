@@ -4,7 +4,7 @@ import PersonIcon from "@mui/icons-material/Person";
 import BedIcon from "@mui/icons-material/Bed";
 import ShowerIcon from "@mui/icons-material/Shower";
 import CropFreeIcon from "@mui/icons-material/CropFree";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import SendIcon from "@mui/icons-material/Send";
 
@@ -21,7 +21,9 @@ const Featured_Property = () => {
       <div className=" container top__featured ">
         <div className="row gap-2">
           <div className="col-lg-6  ">
-            <img src={url} alt="" className="img-fluid top-big__image" />
+            <NavLink to="/property/:id">
+              <img src={url} alt="" className="img-fluid top-big__image" />
+            </NavLink>
             <div className="inner__text">
               <h4 className="property__title">Ausbild Apartments</h4>
               <span>$350/mo4 Bed, 3 Beth, Flats. Area 1448-2537 sqft</span>

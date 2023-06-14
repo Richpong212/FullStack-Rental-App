@@ -8,29 +8,31 @@ import { Link } from "react-router-dom";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import SendIcon from "@mui/icons-material/Send";
 
-const PropertyCard = () => {
+const PropertyCard = ({ property }: any) => {
   const url =
     "https://thumbs.cityrealty.com/assets/smart/736x/webp/1/16/1655f4e3904fb79cb987ab7755d2b3f4b8f37f88/1-city-point.jpg";
   return (
     <div className="card mb-3 mt-5 ">
-      <img
-        src="https://thumbs.cityrealty.com/assets/smart/1004x/webp/d/d9/d91c65a7e01fe4d9491d9883a76d8a01342db7df/25-west-28th-street-01.jpg"
-        className="img-fluid property__image"
-        alt="..."
-      />
+      <Link to={`/property/${property.slug}`}>
+        <img
+          src={property.images[0]}
+          className="img-fluid property__image"
+          alt={property.slug}
+        />
+      </Link>
       <div className="card-body">
         <div className="d-flex icon__container mb-3">
           <PersonIcon className="icon" />
           <span>Landlord</span>
         </div>
-        <h6 className="card-title mb-3 property__title">Ausbild Apartment</h6>
+        <h6 className="card-title mb-3 property__title">{property.title}</h6>
         <div className="card-text mb-3">
-          <span>$350/mo</span>
+          <span>${property.price}/mo</span>
         </div>
         <div className="d-flex gap-3 featured__bottom ">
           <div className="d-flex gap-1 featured__icon">
             <BedIcon className="icon__bottom" />
-            <span>4 Bed</span>
+            <span>{property.bedroom} Bed</span>
           </div>
           <div className="d-flex gap-1 featured__icon">
             <ShowerIcon className="icon__bottom" />

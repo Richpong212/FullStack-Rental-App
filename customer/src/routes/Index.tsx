@@ -53,7 +53,7 @@ const Index = () => {
           }
 
           <Route path="/properties" element={<Properties />} />
-          <Route path="/property/:id" element={<Property />} />
+          <Route path="/property/:slug" element={<Property />} />
           <Route path="/activate/:id" element={<Verification />} />
           <Route path="*" element={<Error />} />
         </Routes>
