@@ -30,7 +30,7 @@ data "aws_subnet" "subnets" {
   availability_zone = "us-east-1a"
 }
 
-data "aws_cloudwatch_log_group" "existing_log_group" {
+data "aws_cloudwatch_log_group" "/aws/eks/richpong-cluster/cluster" {
   name = "/aws/eks/richpong-cluster/cluster"
 }
 
