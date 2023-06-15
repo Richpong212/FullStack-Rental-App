@@ -54,4 +54,3 @@ stages:
          namespace: 'default'
          manifests: '$(System.ArtifactsDirectory)/IAAC/k8s/deployment.yaml'
          containers: 'richpong/rentalservice-api:$(tag)'
-     
