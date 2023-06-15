@@ -26,7 +26,7 @@ steps:
       workingDirectory: "$(System.DefaultWorkingDirectory)/IAAC/aws/kubernetes"
 
   - task: TerraformTaskV4@4
-    displayName: "Terraform Apply"
+    displayName: "Terraform Destroy"
     inputs:
       provider: "aws"
       command: "destroy"
