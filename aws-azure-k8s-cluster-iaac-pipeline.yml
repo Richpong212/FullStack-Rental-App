@@ -6,29 +6,29 @@ pool:
 
 steps:
   - script: echo Hello, world!
-    displayName: 'Run a one-line script'
+    displayName: "Run a one-line script"
 
   - task: TerraformTaskV4@4
-    displayName: 'Terraform Init'
+    displayName: "Terraform Init"
     inputs:
-      provider: 'aws'
-      command: 'init'
-      workingDirectory: '$(System.DefaultWorkingDirectory)/IAAC/aws/kubernetes'
-      backendServiceAWS: 'aws-for-terraform'
-      backendAWSBucketName: 'codegenitor-terraform-backend-state-aws'
-      backendAWSKey: 'kubernetes-dev.tfstate'
+      provider: "aws"
+      command: "init"
+      workingDirectory: "$(System.DefaultWorkingDirectory)/IAAC/aws/kubernetes"
+      backendServiceAWS: "aws-for-terraform"
+      backendAWSBucketName: "codegenitor-terraform-backend-state-aws"
+      backendAWSKey: "kubernetes-dev.tfstate"
 
   - task: TerraformTaskV4@4
-    displayName: 'Terraform Validate'
+    displayName: "Terraform Validate"
     inputs:
-      provider: 'aws'
-      command: 'validate'
-      workingDirectory: '$(System.DefaultWorkingDirectory)/IAAC/aws/kubernetes'
-  
+      provider: "aws"
+      command: "validate"
+      workingDirectory: "$(System.DefaultWorkingDirectory)/IAAC/aws/kubernetes"
+
   - task: TerraformTaskV4@4
-    displayName: 'Terraform Apply' 
+    displayName: "Terraform Apply"
     inputs:
-      provider: 'aws'
-      command: 'destroy'
-      workingDirectory: '$(System.DefaultWorkingDirectory)/IAAC/aws/kubernetes'
-     environmentServiceNameAWS: 'aws-for-terraform'
+      provider: "aws"
+      command: "destroy"
+      workingDirectory: "$(System.DefaultWorkingDirectory)/IAAC/aws/kubernetes"
+      environmentServiceNameAWS: "aws-for-terraform"
