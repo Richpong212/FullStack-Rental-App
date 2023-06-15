@@ -1,0 +1,57 @@
+# Docker
+# Build a Docker image
+# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
+
+trigger:
+- main
+
+resources:
+- repo: self
+
+variables:
+  tag: 22
+
+stages:
+- stage: Build
+  displayName: Build image
+  jobs:
+  - job: Build
+    displayName: Build
+    pool:
+      vmImage: ubuntu-latest
+    steps:
+     - task: CopyFiles@2
+       inputs:
+         SourceFolder: '$(system.DefaultWorkngDirectory)'
+         Contents: '**/*.yaml'
+         TargetFolder: '$(Build.ArtifactStagingDirectory)'
+     - task: PublishBuildArtifacts@1
+       inputs:
+         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+         ArtifactName: 'manifest'
+         publishLocation: 'Container'
+
+#Deploy
+- stage: Deploy
+  displayName: Deploy image
+  jobs:
+  - job: Deploy
+    displayName: Deploy
+    pool:
+      vmImage: ubuntu-latest
+    steps:
+     - task: DownloadPipelineArtifact@2
+       inputs:
+         buildType: 'current'
+         artifactName: 'manifest'
+         itemPattern: '**/*.yaml'
+         targetPath: '$(System.ArtifactsDirectory)'
+     - task: KubernetesManifest@1
+       inputs:
+         action: 'deploy'
+         connectionType: 'kubernetesServiceConnection'
+         kubernetesServiceConnection: 'Aws-K8s-cluster-connection'
+         namespace: 'default'
+         manifests: '$(System.ArtifactsDirectory)/IAAC/k8s/deployment.yaml'
+         containers: 'richpong/rentalservice-api:$(tag)'
+     
