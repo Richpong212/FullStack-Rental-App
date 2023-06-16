@@ -9,6 +9,8 @@ const ContactForm = () => {
   // state to hold the property
   const [property, setProperty] = useState<any>({}); // background image
 
+  console.log(property);
+
   // get location from url
   const location = useLocation();
 
@@ -40,7 +42,7 @@ const ContactForm = () => {
             </div>
             <div>
               <p className="card-text">Address</p>
-              <p className="card-text">Kigali, Rwanda</p>
+              <span className="card-text">{property.location}</span>
             </div>
           </div>
           {/* Phone */}
@@ -50,7 +52,7 @@ const ContactForm = () => {
             </div>
             <div>
               <p className="card-text">Phone</p>
-              <p className="card-text">020928900</p>
+              <p className="card-text">{property.phone}</p>
             </div>
           </div>
           {/* Email */}

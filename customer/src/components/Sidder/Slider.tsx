@@ -1,35 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./slider.scss";
+import { useLocation } from "react-router";
+import { getSingleProperty } from "../../service/property.service";
 
 const Slider = () => {
+  const [property, setProperty] = useState<any>({}); // state to hold the property
+
+  console.log(property);
+
+  const location = useLocation();
+  const path = location.pathname.split("/")[2];
+
+  useEffect(() => {
+    const getProperty = async () => {
+      const property = await getSingleProperty(path);
+      setProperty(property.property);
+    };
+
+    getProperty();
+  }, [path]);
+
   return (
     <div>
       <div id="carouselExample" className="carousel slide">
         <div className="carousel-inner">
-          {/* Carousel Item 1 */}
-          <div className="carousel-item active">
-            <img
-              src="https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              className="d-block w-100"
-              alt="..."
-            />
-          </div>
-          {/* Carousel Item 2 */}
-          <div className="carousel-item">
-            <img
-              src="https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              className="d-block w-100"
-              alt="..."
-            />
-          </div>
-          {/* Carousel Item 3 */}
-          <div className="carousel-item">
-            <img
-              src="https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              className="d-block w-100"
-              alt="..."
-            />
-          </div>
+          {/* Iterate over property.images array and render each image */}
+          {property.images &&
+            property.images.map((image: string, index: number) => (
+              <div
+                className={`carousel-item ${index === 0 ? "active" : ""}`}
+                key={index}
+              >
+                <img
+                  src={image}
+                  className="d-block w-100"
+                  alt="propertyimage"
+                />
+              </div>
+            ))}
         </div>
         {/* Previous Button */}
         <button
