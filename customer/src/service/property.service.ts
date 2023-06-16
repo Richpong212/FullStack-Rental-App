@@ -9,3 +9,9 @@ export const getAllProperty = async (dispatch: any) => {
   const res = await axios.get(`${baseURL}/properties`);
   return dispatch(getAllProperties(res.data.properties));
 };
+
+// get a single property
+export const getSingleProperty = async (slug: string) => {
+  const res = await axios.get(`${baseURL}/properties/${slug}`);
+  return res.data;
+};

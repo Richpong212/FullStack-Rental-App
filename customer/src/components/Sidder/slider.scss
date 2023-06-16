@@ -1,0 +1,78 @@
+// carousel__btn styles
+
+.carousel__btn {
+  position: absolute; // Position the button absolutely within its parent container
+  height: 50px; // Set the height of the button to 50 pixels
+  width: 50px; // Set the width of the button to 50 pixels
+  border-radius: 50%; // Apply a border radius of 50% to make the button circular
+  top: 80%; // Position the button 80% from the top of its parent container
+  left: 45rem; // Position the button 40rem from the left of its parent container
+  border: solid 1px #fff; // Apply a solid white border with a width of 1 pixel to the button
+
+  &:hover {
+    border: 1px solid rgb(253, 169, 79); // Change the border color to an orange shade on hover
+  }
+
+  /* Style for the button on smaller screens */
+  @media (max-width: 768px) {
+    position: absolute;
+    left: 20rem; // Adjust the left position for smaller screens
+  }
+
+  /* Style for the button on tablet screens */
+  @media (min-width: 1024px) {
+    position: absolute;
+    left: 30rem; // Adjust the left position for tablet screens
+  }
+
+  /* Style for the button on laptop screens */
+  @media (min-width: 1280px) {
+    position: absolute;
+    left: 40rem; // Adjust the left position for laptop screens
+  }
+
+  /* Style for the button on desktop screens */
+  @media (min-width: 1440px) {
+    position: absolute;
+    left: 45rem; // Adjust the left position for desktop screens
+  }
+}
+
+// carousel__btnleft styles
+.carousel__btnleft {
+  position: absolute; // Position the button absolutely within its parent container
+  height: 50px; // Set the height of the button to 50 pixels
+  width: 50px; // Set the width of the button to 50 pixels
+  border-radius: 50%; // Apply a border radius of 50% to make the button circular
+  top: 80%; // Position the button 80% from the top of its parent container
+  left: 45rem; // Position the button 45rem from the left of its parent container
+  border: solid 1px #fff; // Apply a solid white border with a width of 1 pixel to the button
+
+  &:hover {
+    border: 1px solid rgb(253, 169, 79); // Change the border color to an orange shade on hover
+  }
+
+  // Mobile view styles
+  @media (max-width: 768px) {
+    position: absolute;
+    left: 25rem; // Adjust the left position for mobile screens
+  }
+
+  /* Style for the button on tablet screens */
+  @media (min-width: 1024px) {
+    position: absolute;
+    left: 35rem; // Adjust the left position for tablet screens
+  }
+
+  /* Style for the button on laptop screens */
+  @media (min-width: 1280px) {
+    position: absolute;
+    left: 45rem; // Adjust the left position for laptop screens
+  }
+
+  /* Style for the button on desktop screens */
+  @media (min-width: 1440px) {
+    position: absolute;
+    left: 50rem; // Adjust the left position for desktop screens
+  }
+}
