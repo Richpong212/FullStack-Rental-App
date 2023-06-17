@@ -2,9 +2,9 @@ name: customer CI
 
 on:
   push:
-    branches: [customer]
+    branches: [main]
   pull_request:
-    branches: [customer]
+    branches: [main]
 
 jobs:
   test:
