@@ -9,8 +9,6 @@ const ContactForm = () => {
   // state to hold the property
   const [property, setProperty] = useState<any>({}); // background image
 
-  console.log(property);
-
   // get location from url
   const location = useLocation();
 
