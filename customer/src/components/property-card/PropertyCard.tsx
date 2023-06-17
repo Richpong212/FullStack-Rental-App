@@ -27,10 +27,6 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
     (state: RootState) => state.customer.data.isLoggedIn
   );
 
-  console.log(isLoggedin);
-
-  // toast a message if the user is not logged in
-
   // handleClick function
   const handleClick = () => {
     if (!isLoggedin) {
