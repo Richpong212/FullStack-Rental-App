@@ -10,7 +10,15 @@ describe("PropertyCard component", () => {
     render(
       <MemoryRouter>
         <Provider store={store}>
-          <PropertyCard />
+          <PropertyCard
+            property={{
+              slug: "",
+              images: [],
+              title: "",
+              price: 0,
+              bedroom: 0,
+            }}
+          />
         </Provider>
       </MemoryRouter>
     );
