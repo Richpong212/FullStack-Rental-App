@@ -2,7 +2,7 @@ import React from "react";
 import "./NavbarStyles.scss";
 import AddIcon from "@mui/icons-material/Add";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { logout } from "../../../redux/Slice/customerSlice";
 
 const NavigationBar = () => {
@@ -33,11 +33,11 @@ const NavigationBar = () => {
         </div>
 
         <div className="d-flex">
-          <a href="/create-property">
+          <Link to="/create-property">
             <button className="btn mobile-navbutton ">
               Add Property <AddIcon />
             </button>
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -109,10 +109,11 @@ const NavigationBar = () => {
               </ul>
             </li>
           </ul>
-
-          <button className="btn desktop-navbutton " type="submit">
-            Add Property <AddIcon />
-          </button>
+          <Link to="/create-property">
+            <button className="btn desktop-navbutton " type="submit">
+              Add Property <AddIcon />
+            </button>
+          </Link>
         </div>
       </div>
     </nav>
