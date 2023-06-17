@@ -166,4 +166,4 @@ I would like to acknowledge the following open-source projects and resources tha
 - git status
 - git add .
 - git commit -m "updating subnets"
-- git push -u origin main
+- git push -u origin main/master
