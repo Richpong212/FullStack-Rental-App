@@ -32,7 +32,10 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <FeaturedProperty />
+      {
+        // Featured Property
+        <FeaturedProperty />
+      }
       <AllProperties />
       <EstateAgent />
     </div>

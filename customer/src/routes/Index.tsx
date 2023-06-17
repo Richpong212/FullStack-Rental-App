@@ -10,11 +10,12 @@ import Registration from "../pages/Registration/Registration";
 import Footer from "../components/layout/Footer/Footer";
 import Verification from "../pages/Verification/Verification";
 import { useSelector } from "react-redux";
+import { RootState } from "../redux/store";
 
 const Index = () => {
   // isloggedin from redux
   const isLoggedin = useSelector(
-    (state: any) => state.customer.data.isLoggedIn
+    (state: RootState) => state.customer.data.isLoggedIn
   );
 
   return (
@@ -53,7 +54,15 @@ const Index = () => {
           }
 
           <Route path="/properties" element={<Properties />} />
-          <Route path="/property/:slug" element={<Property />} />
+          {
+            // if the user is not logged in, go to home
+            !isLoggedin ? (
+              <Route path="/property/:slug" element={<Home />} />
+            ) : (
+              // if the user is logged in, go to property
+              <Route path="/property/:slug" element={<Property />} />
+            )
+          }
           <Route path="/activate/:id" element={<Verification />} />
           <Route path="*" element={<Error />} />
         </Routes>

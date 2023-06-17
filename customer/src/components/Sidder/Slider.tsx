@@ -6,8 +6,6 @@ import { getSingleProperty } from "../../service/property.service";
 const Slider = () => {
   const [property, setProperty] = useState<any>({}); // state to hold the property
 
-  console.log(property);
-
   const location = useLocation();
   const path = location.pathname.split("/")[2];
 
