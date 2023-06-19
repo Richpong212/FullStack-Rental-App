@@ -1,0 +1,42 @@
+// from property form styles
+.property__form {
+  .propertyform__content {
+    margin: 0 1rem;
+
+    .maintype {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      .type {
+        flex: 2;
+      }
+      .type__info {
+        flex: 1;
+      }
+      .property__info {
+        flex: 3;
+      }
+
+      .propertyform__input {
+        box-shadow: none;
+
+        &:focus {
+          border: 1px solid rgb(253, 169, 79);
+          box-shadow: none;
+        }
+
+        &:active {
+          border: 1px solid rgb(253, 169, 79);
+          box-shadow: none;
+        }
+
+        &:hover {
+          border: 1px solid rgb(253, 169, 79);
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
