@@ -6,9 +6,51 @@
 }
 
 .contactnow {
-    display: flex;
+    background-color: white;
+    position:relative;
+    height: 390px;
+    width: 100px;
     font-weight: 500;
-    align-content: center;
-    font-size: 30px;
-    padding-right: 10rem;
+    padding-top: 1.5rem;
+    padding-left: 1rem;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    border-radius: 15px;
+}
+
+.responsive__map {
+    overflow: hidden;
+    position: relative;
+    height: 40rem;
+    margin-right: 2rem;
+    margin-top: 10rem;
+    cursor: pointer;
+    
+}
+
+.map__iframe {
+    left: 0;
+    top: 0;
+    border: 0;
+    height: 100%;
+    width:100%;
+    position: absolute;
+}
+
+.maplinestyles {
+    padding: 8rem 8rem;
+    margin-bottom: 28rem;
+   
+   
+}
+
+.contactform {
+    padding-top: 2rem;
+}
+
+.inputgroup {
+    
+}
+.btn__submit {
+
 }
