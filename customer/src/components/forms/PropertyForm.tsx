@@ -9,11 +9,11 @@ import TextField from "@mui/material/TextField";
 
 const PropertyForm = () => {
   // State to store the selected category
-  const [category, setCategory] = useState("");
+  const [input, setInput] = useState("");
 
   // Event handler for category select change
   const handleChange = (event: SelectChangeEvent) => {
-    setCategory(event.target.value as string);
+    setInput(event.target.value as string);
   };
 
   return (
@@ -34,7 +34,7 @@ const PropertyForm = () => {
                   <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
-                    value={category}
+                    value={input}
                     label="category"
                     onChange={handleChange}
                     className="propertyform__input"
@@ -66,56 +66,104 @@ const PropertyForm = () => {
                       <TextField
                         required
                         id="standard-required"
-                        label="Required"
+                        label="Title"
                         variant="standard"
                         placeholder="Title"
                         type="text"
                       />
                       <TextField
                         id="standard-disabled"
-                        label="Required"
+                        label="Location"
                         variant="standard"
                         placeholder="Location"
                         type="text"
                       />
-                      <TextField
-                        id="standard-password-input"
-                        label="Password"
-                        type="password"
-                        autoComplete="current-password"
+                    </div>
+                    <div>
+                      <FormControl
                         variant="standard"
-                      />
-                      <TextField
-                        id="standard-read-only-input"
-                        label="Read Only"
-                        defaultValue="Hello World"
-                        InputProps={{
-                          readOnly: true,
-                        }}
+                        sx={{ m: 1, minWidth: 120 }}
+                      >
+                        <InputLabel id="demo-simple-select-standard-label">
+                          Bathroom
+                        </InputLabel>
+                        <Select
+                          labelId="demo-simple-select-standard-label"
+                          id="demo-simple-select-standard"
+                          value={input}
+                          onChange={handleChange}
+                          label="Age"
+                        >
+                          <MenuItem value="">
+                            <em>None</em>
+                          </MenuItem>
+                          <MenuItem value={input}>Yes</MenuItem>
+                          <MenuItem value={input}>No</MenuItem>
+                        </Select>
+                      </FormControl>
+                      <FormControl
                         variant="standard"
-                      />
-                      <TextField
-                        id="standard-number"
-                        label="Number"
-                        type="number"
-                        InputLabelProps={{
-                          shrink: true,
-                        }}
+                        sx={{ m: 1, minWidth: 120 }}
+                      >
+                        <InputLabel id="demo-simple-select-filled-label">
+                          Bedroom
+                        </InputLabel>
+                        <Select
+                          labelId="demo-simple-select-filled-label"
+                          id="demo-simple-select-filled"
+                          value={input}
+                          onChange={handleChange}
+                        >
+                          <MenuItem value="">
+                            <em>None</em>
+                          </MenuItem>
+                          <MenuItem value={input}>Yes</MenuItem>
+                          <MenuItem value={input}>No</MenuItem>
+                        </Select>
+                      </FormControl>
+                    </div>
+                    <div>
+                      <FormControl
                         variant="standard"
-                      />
-                      <TextField
-                        id="standard-search"
-                        label="Search field"
-                        type="search"
+                        sx={{ m: 1, minWidth: 120 }}
+                      >
+                        <InputLabel id="demo-simple-select-standard-label">
+                          Parking
+                        </InputLabel>
+                        <Select
+                          labelId="demo-simple-select-standard-label"
+                          id="demo-simple-select-standard"
+                          value={input}
+                          onChange={handleChange}
+                          label="Age"
+                        >
+                          <MenuItem value="">
+                            <em>None</em>
+                          </MenuItem>
+                          <MenuItem value={input}>Yes</MenuItem>
+                          <MenuItem value={input}>No</MenuItem>{" "}
+                        </Select>
+                      </FormControl>
+                      <FormControl
                         variant="standard"
-                      />
-                      <TextField
-                        id="standard-helperText"
-                        label="Helper text"
-                        defaultValue="Default Value"
-                        helperText="Some important text"
-                        variant="standard"
-                      />
+                        sx={{ m: 1, minWidth: 120 }}
+                      >
+                        <InputLabel id="demo-simple-select-filled-label">
+                          Pets
+                        </InputLabel>
+                        <Select
+                          labelId="demo-simple-select-filled-label"
+                          id="demo-simple-select-filled"
+                          value={input}
+                          onChange={handleChange}
+                        >
+                          <MenuItem value="">
+                            <em>None</em>
+                          </MenuItem>
+                          <MenuItem value={33}>Yes</MenuItem>
+                          <MenuItem value={20}>No</MenuItem>
+                        </Select>
+                      </FormControl>
                     </div>
                   </Box>
                 </div>
