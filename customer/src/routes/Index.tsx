@@ -71,6 +71,7 @@ const Index = () => {
         <Footer />
       </footer>
     </BrowserRouter>
+    
   );
 };
 

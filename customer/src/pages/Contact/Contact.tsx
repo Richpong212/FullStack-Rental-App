@@ -27,7 +27,7 @@ const Contact = () => {
         marginTop: "17rem"
         }}>Contact</h1>
 
-        
+      {/* The Google Map */} 
   <div className="container maplistyles">
     <div className="row">
     <div className="col">
@@ -42,12 +42,12 @@ const Contact = () => {
       </iframe>
     </div>
   
-
+      {/* Creating the contatct form */}
     <div className="container col contactnow">
         <div className="">
             <h3>Contact Now</h3>
           <form className="row">
-            <div mb-3>
+            <div >
               <label htmlFor="Name" className="form-label"></label>
               <input className="form-control" type="text" id="Name" placeholder="Name" required/>
             </div>
