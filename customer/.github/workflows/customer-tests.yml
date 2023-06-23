@@ -18,8 +18,11 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 14.x
+
+      # Install dependencies
       - name: Install dependencies
         run: cd FullStack-Rental-App/customer  && yarn install
 
+      # Run customer tests
       - name: Run customer tests.
-        run: cd customer && npm test
+        run: cd FullStack-Rental-App/customer && npm test
