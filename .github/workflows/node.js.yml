@@ -21,8 +21,8 @@ jobs:
 
       # Install dependencies
       - name: Install dependencies
-        run: cd FullStack-Rental-App/customer  && yarn install
+        run: cd customer  && yarn install
 
       # Run customer tests
       - name: Run customer tests.
-        run: cd FullStack-Rental-App/customer && npm test
+        run: cd customer && npm test
