@@ -21,5 +21,5 @@ jobs:
       - name: Install dependencies
         run: cd customer && yarn install
 
-      - name: Run customer tests
+      - name: Run customer tests.
         run: cd customer && npm test
