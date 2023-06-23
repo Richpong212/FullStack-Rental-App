@@ -1,4 +1,4 @@
-name: customer CI
+name: Rental Service Customer CI
 
 on:
   push:
