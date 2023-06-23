@@ -2,9 +2,9 @@ name: customer CI
 
 on:
   push:
-    branches: [customer]
+    branches: [main]
   pull_request:
-    branches: [customer]
+    branches: [main]
 
 jobs:
   test:
@@ -12,7 +12,14 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
+      # customer tests
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
       - name: Install dependencies
-        run: yarn install
-      - name: Run tests
-        run: npm test
+        run: cd customer && yarn install
+
+      - name: Run customer tests
+        run: cd customer && npm test
