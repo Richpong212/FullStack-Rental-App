@@ -1,0 +1,36 @@
+.error{
+    text-align: center;
+    height: 100vh;
+    padding: 6rem 6rem;
+    font-family: "montserrat", sans-serif;
+    background-image: linear-gradient(125deg, #6a89cc, hsl(95, 32%, 80%));
+}
+
+.text {
+    color: #fff;
+}
+
+.container__a{
+        text-decoration: none;
+        background: #ECA760;
+        color: #fff;
+        padding: 12px 24px;
+        display: inline-block;
+        border-radius: 25px;
+        font-size: 14px;
+        text-transform: uppercase;
+        transition: 0.4s;
+}
+
+.container__ahover {
+    background-color: #ECA760;
+}
+
+.error__h1 {
+    font-size: 100px;
+    margin: 0;
+    font-weight: 900;
+    letter-spacing: 20px;
+    color: #343434; 
+
+}
