@@ -1,7 +1,22 @@
-admin
-customer--test
-client
-azure_rsa
+
 azure_rsa.pub
 
-IAAC/.terraform/providers
+# Ignore Terraform files
+.terraform/
+
+# Ignore any .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Ignore any crash.log files
+crash.log
+
+# Ignore override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
