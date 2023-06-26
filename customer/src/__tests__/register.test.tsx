@@ -16,9 +16,9 @@ describe("RegisterField component", () => {
     );
     // get elements from the DOM
     const fullName = screen.getByPlaceholderText("full name");
-    const email = screen.getByPlaceholderText("email");
-    const phone = screen.getByPlaceholderText("phone number");
-    const password = screen.getByPlaceholderText("password");
+    const email = screen.getByPlaceholderText("codegenitor@gmail.com");
+    const phone = screen.getByPlaceholderText("2332094882");
+    const password = screen.getByPlaceholderText("One@1234");
     const button = screen.getByRole("button", { name: /Register/i });
 
     // simulate user events
