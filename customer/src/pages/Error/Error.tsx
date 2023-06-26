@@ -4,7 +4,7 @@ import "./Error.scss"
 const Error = () => {
   return (
 <div>
-  <div className="error">
+  <div className="err__page">
     
      <h2 style={{color:"#343434"}}>Oops! Page not found.
      </h2>
