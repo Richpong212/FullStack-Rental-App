@@ -9,7 +9,7 @@ const PropertiesHeader = () => {
     <div
       style={{
         backgroundImage:
-          "url(" + publicUrl + "/assets/img/banner/properties.jpg)",
+          "url(" + publicUrl + "/assets/img/banner/propsHead1.jpg)",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         backgroundPosition: "center center",
@@ -18,7 +18,7 @@ const PropertiesHeader = () => {
       }}
     >
       <div className="container properties">
-        <h3>Properties</h3>
+        <h3 style={{color:"white"}}>Properties</h3>
       </div>
     </div>
   );
