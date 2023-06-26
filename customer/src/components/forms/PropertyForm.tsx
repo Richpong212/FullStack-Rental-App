@@ -12,10 +12,16 @@ const PropertyForm = () => {
   const [category, setCategory] = useState("");
   const [title, setTitle] = useState("");
   const [location, setLocation] = useState("");
+  const [pets, setPets] = useState("");
 
   // Event handler for category select change
   const handleChange = (event: SelectChangeEvent) => {
     setCategory(event.target.value as string);
+  };
+
+  // Event handler for pets select change
+  const handleChangePets = (event: SelectChangeEvent) => {
+    setPets(event.target.value as string);
   };
 
   return (
@@ -89,6 +95,30 @@ const PropertyForm = () => {
                   </Box>
                 </div>
               </div>
+              {/* Pets */}
+              <div className="maintype">
+                <div className="type">
+                  <h3>Pets</h3>
+                </div>
+                <div className="ml-5 type__info">
+                  <FormControl fullWidth>
+                    <InputLabel id="demo-simple-select-label">Pets</InputLabel>
+                    <Select
+                      labelId="demo-simple-select-label"
+                      id="demo-simple-select"
+                      value={pets}
+                      label="pets"
+                      onChange={handleChangePets}
+                      className="propertyform__input"
+                    >
+                      {/* Menu items for category options */}
+                      <MenuItem value={"Yes"}>Yes</MenuItem>
+                      <MenuItem value={"No"}>No</MenuItem>
+                    </Select>
+                  </FormControl>
+                </div>
+              </div>
+              {/* end Pets */}
             </div>
           </div>
         </div>
