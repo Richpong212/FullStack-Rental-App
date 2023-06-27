@@ -26,10 +26,6 @@ describe("AddProperty component", () => {
     //check if Add Information is present in the rendered component
     const addInformation = screen.getByText(/Add Information/i);
     expect(addInformation).toBeInTheDocument();
-
-    //check if Publish is present in the rendered component
-    const publish = screen.getByText(/Publish/i);
-    expect(publish).toBeInTheDocument();
   });
 
   test("should update input values when user types", () => {

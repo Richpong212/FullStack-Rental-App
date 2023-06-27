@@ -64,6 +64,17 @@ const Index = () => {
             )
           }
           <Route path="/activate/:id" element={<Verification />} />
+
+          {/* Route for  Blogs Below */}
+
+          {/* Route for  Jobs Below */}
+
+          {/* Route for  Cookies Below */}
+
+          {/* Route for  Terms & Conditions Below */}
+
+          {/* Route for  FAQ Below */}
+
           <Route path="*" element={<Error />} />
         </Routes>
       </main>

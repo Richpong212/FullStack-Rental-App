@@ -18,7 +18,7 @@ const PropertyForm = () => {
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [owner, setOwner] = useState("");
-  const [images, setImages] = useState<string[]>([]);
+  const [image, setImage] = useState<string[]>([]);
 
   // Event handler for category select change
   const handleChange = (event: SelectChangeEvent) => {
@@ -28,24 +28,6 @@ const PropertyForm = () => {
   // Event handler for pets select change
   const handleChangePets = (event: SelectChangeEvent) => {
     setPets(event.target.value as string);
-  };
-
-  // Event handler for images select change
-  const handleImageChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const files = e.target.files;
-    if (files) {
-      const imageArray: string[] = Array.from(files).map((file) =>
-        URL.createObjectURL(file)
-      );
-      setImages(imageArray);
-    }
-  };
-
-  // handle upload
-  const handleUpload = () => {
-    // Implement the logic to handle image upload
-    // Access the selected images using the 'images' state array
-    console.log(images);
   };
 
   return (
@@ -209,41 +191,30 @@ const PropertyForm = () => {
                 <div className="type">
                   <h3>Upload Images</h3>
                 </div>
-                <div className="ml-5 type__info">
+                <div className="ml-5 type__info row">
                   <FormControl fullWidth>
                     <input
-                      id="images"
+                      className="mb-2"
                       type="file"
-                      multiple
-                      onChange={handleImageChange}
+                      id="images"
                       accept="image/*"
-                      style={{ display: "none" }}
                     />
-                    <label htmlFor="images">
-                      <Button variant="contained" component="span">
-                        Select Images
-                      </Button>
-                    </label>
-                    {images.map((image, index) => (
-                      <img
-                        key={index}
-                        src={image}
-                        alt={`Image ${index}`}
-                        style={{
-                          width: "200px",
-                          height: "auto",
-                          marginTop: "10px",
-                        }}
-                      />
-                    ))}
+                    <input
+                      className="mb-2"
+                      type="file"
+                      id="images"
+                      accept="image/*"
+                    />
+                    <input
+                      className="mb-2"
+                      type="file"
+                      id="images"
+                      accept="image/*"
+                    />
+                    <button className="globalbuttonstyles mt-3">
+                      Publish Property
+                    </button>
                   </FormControl>
-                  <Button
-                    className="globalbuttonstyles mt-3"
-                    onClick={handleUpload}
-                    disabled={images.length === 0}
-                  >
-                    Upload
-                  </Button>
                 </div>
               </div>
             </div>
