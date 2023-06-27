@@ -15,3 +15,9 @@ export const getSingleProperty = async (slug: string) => {
   const res = await axios.get(`${baseURL}/properties/${slug}`);
   return res.data;
 };
+
+// create a property
+export const createProperty = async (data: any) => {
+  const res = await axios.post(`${baseURL}/properties`, data);
+  return res.data;
+};
