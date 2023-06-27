@@ -93,7 +93,7 @@ const RgisterField = () => {
             className={`form-control form__input mb-2 ${
               errors.phone && touched.phone ? "input-error" : ""
             }`}
-            placeholder="phone number"
+            placeholder="2332094882"
             value={values.phone}
             onChange={handleChange}
             onBlur={handleBlur}
@@ -111,7 +111,7 @@ const RgisterField = () => {
             className={`form-control form__input mb-2 ${
               errors.email && touched.email ? "input-error" : ""
             }`}
-            placeholder="email"
+            placeholder="codegenitor@gmail.com"
             value={values.email}
             onChange={handleChange}
             onBlur={handleBlur}
@@ -128,7 +128,7 @@ const RgisterField = () => {
             className={`form-control form__input mb-2 ${
               errors.password && touched.password ? "input-error" : ""
             }`}
-            placeholder="password"
+            placeholder="One@1234"
             value={values.password}
             onChange={handleChange}
             onBlur={handleBlur}
