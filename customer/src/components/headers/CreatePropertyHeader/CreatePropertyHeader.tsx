@@ -8,10 +8,10 @@ const CreatePropertyHeader = () => {
   return (
     <div
       style={{
-        backgroundImage: "url(" + publicUrl + "/assets/img/banner/propsHead1.jpg)",
+        backgroundImage: "url(" + publicUrl + "/assets/img/bg/addProps01.jpg)",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        backgroundPosition: "top center",
+        backgroundPosition: "center bottom",
         width: "100%",
         height: "50vh",
       }}
