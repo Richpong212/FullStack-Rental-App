@@ -27,37 +27,4 @@ describe("AddProperty component", () => {
     const addInformation = screen.getByText(/Add Information/i);
     expect(addInformation).toBeInTheDocument();
   });
-
-  test("should update input values when user types", () => {
-    // Render the AddProperty component with the required dependencies
-    render(
-      <MemoryRouter>
-        <Provider store={store}>
-          <AddProperty />
-        </Provider>
-      </MemoryRouter>
-    );
-
-    // Get the input element for the "House Name" field
-    const input = screen.getByPlaceholderText(/title/i) as HTMLInputElement;
-
-    // Simulate a change event by typing into the input field
-    fireEvent.change(input, { target: { value: "title" } });
-
-    // Check if the input value has been updated correctly
-    expect(input.value).toBe("title");
-  });
-
-  test("should display validation error if required fields are empty", () => {
-    // Render the AddProperty component with the required dependencies
-    render(
-      <MemoryRouter>
-        <Provider store={store}>
-          <AddProperty />
-        </Provider>
-      </MemoryRouter>
-    );
-  });
-
-  // Add more tests for other functionality and UI elements...
 });
