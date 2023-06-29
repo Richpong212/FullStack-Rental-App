@@ -4,6 +4,7 @@ import SearchBar from "../../components/search_bar/SearchBar";
 import FeaturedProperty from "../../components/featured-Property/Featured_Property";
 import AllProperties from "../../components/All-Properties/AllProperties";
 import EstateAgent from "../../components/banner/EstateAgent";
+import Blog from "../Blog";
 
 const Home = () => {
   // background image

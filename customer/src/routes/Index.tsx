@@ -11,6 +11,10 @@ import Footer from "../components/layout/Footer/Footer";
 import Verification from "../pages/Verification/Verification";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
+import Blog from "../pages/Blog";
+import Cookies from "../pages/Cookies";
+import Jobs from "../pages/Jobs";
+import TermsAndConditions from "../pages/TermsAndConditions";
 
 const Index = () => {
   // isloggedin from redux
@@ -64,6 +68,25 @@ const Index = () => {
             )
           }
           <Route path="/activate/:id" element={<Verification />} />
+
+             {/* Route For Blog Below*/}
+              <Route path="blog" element={<Blog />} />
+               
+
+              {/* Route For Cookies Below*/}
+               <Route path="cookies" element={<Cookies />} />
+
+
+               {/* Route For Jobs Below*/}
+                <Route path="jobs" element={<Jobs />} />
+  
+
+                {/* Route For Terms and Conditions Below*/}
+                <Route path="terms and conditions" element={<TermsAndConditions />} />
+
+
+                 {/* Route For Contact and Help Below*/}
+
           <Route path="*" element={<Error />} />
         </Routes>
       </main>
