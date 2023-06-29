@@ -1,1 +1,1 @@
-{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"tf-state","Source":"./modules/tf-state","Dir":"modules/tf-state"},{"Key":"vpc-infra","Source":"./modules/vpc","Dir":"modules/vpc"}]}
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"ecr","Source":"./modules/ecr","Dir":"modules/ecr"},{"Key":"ecrRepo","Source":"./modules/ecr","Dir":"modules/ecr"},{"Key":"tf-state","Source":"./modules/tf-state","Dir":"modules/tf-state"},{"Key":"vpc-infra","Source":"./modules/vpc","Dir":"modules/vpc"}]}
