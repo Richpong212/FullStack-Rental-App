@@ -3,9 +3,17 @@ import "./propertyform.scss";
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 import jwt_decode from "jwt-decode";
-import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import { createProperty } from "../../service/property.service";
+import {
+  getStorage,
+  ref,
+  uploadBytesResumable,
+  getDownloadURL,
+} from "firebase/storage";
+
+import axios from "axios";
+import app from "../../service/firebase";
 
 interface PropertyFormInput {
   category?: string;
@@ -13,7 +21,7 @@ interface PropertyFormInput {
   description?: string;
   location?: string;
   price?: string;
-  image?: string[];
+  images?: any[];
   owner?: string;
   area?: string;
   region?: string;
@@ -52,6 +60,7 @@ const PropertyForm: FC = () => {
   const userId = decodedToken.user;
 
   const [input, setInput] = useState<PropertyFormInput>({ owner: userId });
+  const [images, setImages] = useState<any>([]);
 
   // get the user info from the redux store
   const user: any = useSelector(
@@ -59,7 +68,7 @@ const PropertyForm: FC = () => {
   );
 
   // handle the input change
-  const handleChange = (
+  const handleChange = async (
     e: ChangeEvent<
       | HTMLInputElement
       | HTMLTextAreaElement
@@ -67,39 +76,91 @@ const PropertyForm: FC = () => {
       | HTMLInputElement
     >
   ) => {
-    const { name, value, type, files }: any = e.target;
-    if (type === "file") {
-      const uploadedImages = Array.from(files || []).map((file: any) =>
-        URL.createObjectURL(file)
-      );
-      setInput((prevInput) => ({
-        ...prevInput,
-        [name]: uploadedImages,
-      }));
-    } else {
-      setInput((prevInput) => ({
-        ...prevInput,
-        [name]: value,
-      }));
+    const { name, value }: any = e.target;
+
+    setInput((prevInput) => ({
+      ...prevInput,
+      [name]: value,
+    }));
+  };
+
+  // handle the image change
+  const handleImageChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { files }: any = e.target;
+    if (files) {
+      const selectedImages: File[] = Array.from(files);
+      setImages(selectedImages);
     }
   };
 
   // handle the form submit
-  const handleSubmit = () => {
-    // send info to the backend
+  // handle the form submit
+  const handleSubmit = async () => {
     try {
-      const res: any = createProperty(input, token);
-      toast.success(`${res.message}`, {
-        position: "bottom-center",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: false,
-        pauseOnHover: false,
-        draggable: false,
-        progress: undefined,
-      });
+      const downloadURLs: string[] = [];
+      const storage = getStorage(app);
+
+      // Upload each image and get the download URL
+      for (const image of images) {
+        const fileName = new Date().getTime() + image.name;
+        const storageRef = ref(storage, fileName);
+        const uploadTask = uploadBytesResumable(storageRef, image);
+
+        uploadTask.on(
+          "state_changed",
+          (snapshot) => {
+            // handle state changes if needed
+          },
+          (error) => {
+            // handle upload errors if needed
+          },
+          () => {
+            getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+              downloadURLs.push(downloadURL);
+
+              // Check if all images have been uploaded
+              if (downloadURLs.length === images.length) {
+                const inputData: PropertyFormInput = {
+                  ...input,
+                  images: downloadURLs,
+                };
+
+                // Call the createProperty function with the updated input data
+                createProperty(inputData, token)
+                  .then((res: any) => {
+                    toast.success(`${res.message}`, {
+                      position: "bottom-center",
+                      autoClose: 2000,
+                      hideProgressBar: false,
+                      closeOnClick: false,
+                      pauseOnHover: false,
+                      draggable: false,
+                      progress: undefined,
+                    });
+                    // Reset the form
+                    setInput({
+                      owner: userId,
+                    });
+                    setImages([]);
+                  })
+                  .catch((error: any) => {
+                    toast.error(`${error.response.data.errors}`, {
+                      position: "bottom-center",
+                      autoClose: 2000,
+                      hideProgressBar: false,
+                      closeOnClick: false,
+                      pauseOnHover: false,
+                      draggable: false,
+                      progress: undefined,
+                    });
+                  });
+              }
+            });
+          }
+        );
+      }
     } catch (error: any) {
-      toast.error(`${error.response.data.message}`, {
+      toast.error(`${error.response.data.errors}`, {
         position: "bottom-center",
         autoClose: 2000,
         hideProgressBar: false,
@@ -276,7 +337,7 @@ const PropertyForm: FC = () => {
               type="file"
               name="images"
               multiple
-              onChange={handleChange}
+              onChange={handleImageChange}
             />
           </div>
         </div>

@@ -18,10 +18,14 @@ export const getSingleProperty = async (slug: string) => {
 
 // create a property
 export const createProperty = async (data: any, token: string) => {
-  const res = await axios.post(`${baseURL}/properties`, data, {
-    headers: {
-      Authorization: token,
-    },
-  });
-  return res.data;
+  try {
+    const res = await axios.post(`${baseURL}/properties`, data, {
+      headers: {
+        Authorization: token,
+      },
+    });
+    return res.data;
+  } catch (error) {
+    console.log(error);
+  }
 };
