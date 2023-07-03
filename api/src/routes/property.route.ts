@@ -16,7 +16,7 @@ const propertyRouter = Router();
 propertyRouter.post(
   "/",
   isLoggedIn,
-  isAdmin,
+
   propertyValidation,
   validate,
   createProperty

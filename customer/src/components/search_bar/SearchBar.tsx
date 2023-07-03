@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SearchBar.scss";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 
