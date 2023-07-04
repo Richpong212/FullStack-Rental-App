@@ -11,6 +11,7 @@ import Footer from "../components/layout/Footer/Footer";
 import Verification from "../pages/Verification/Verification";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
+import SearchResults from "../pages/Search-Results/SearchResults";
 
 const Index = () => {
   // isloggedin from redux
@@ -54,6 +55,7 @@ const Index = () => {
           }
 
           <Route path="/properties" element={<Properties />} />
+          <Route path="/search" element={<SearchResults />} />
           {
             // if the user is not logged in, go to home
             !isLoggedin ? (

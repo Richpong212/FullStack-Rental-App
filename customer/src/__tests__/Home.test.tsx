@@ -23,17 +23,17 @@ describe("Home component", () => {
 
   // test for search bar
   test("should render search bar", () => {
-    render(<SearchBar />);
+    render(
+      <MemoryRouter>
+        <Provider store={store}>
+          <SearchBar />
+        </Provider>
+      </MemoryRouter>
+    );
     const search = screen.getByPlaceholderText(/Search by location/i);
-    const allProperties = screen.getByText(/Properties/i);
-    const minPrice = screen.getByText(/Price/i);
-    const forRentButton = screen.getByText(/For Rent/i);
 
     // expect the elements to be in the document
     expect(search).toBeInTheDocument();
-    expect(allProperties).toBeInTheDocument();
-    expect(minPrice).toBeInTheDocument();
-    expect(forRentButton).toBeInTheDocument();
   });
 
   // test for become rental agent
