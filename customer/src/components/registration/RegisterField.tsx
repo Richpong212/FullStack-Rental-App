@@ -6,9 +6,6 @@ import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
 const RgisterField = () => {
-  // navigate
-  const navigate = useNavigate();
-
   // onSubmit function
   const onSubmit = async (values: any, actions: any) => {
     try {
