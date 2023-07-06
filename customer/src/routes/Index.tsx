@@ -11,7 +11,13 @@ import Footer from "../components/layout/Footer/Footer";
 import Verification from "../pages/Verification/Verification";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
-import SearchResults from "../pages/Search-Results/SearchResults";
+import Blog from "../pages/Blog";
+import Cookies from "../pages/Cookies";
+import Jobs from "../pages/Jobs";
+import TermsAndConditions from "../pages/TermsAndConditions";
+import ContactAndHelp from "../pages/ContactAndHelp";
+import Faq from "../pages/Faq/Faq";
+import AboutUs from "../pages/AboutUs";
 
 const Index = () => {
   // isloggedin from redux
@@ -55,7 +61,6 @@ const Index = () => {
           }
 
           <Route path="/properties" element={<Properties />} />
-          <Route path="/search" element={<SearchResults />} />
           {
             // if the user is not logged in, go to home
             !isLoggedin ? (
@@ -67,15 +72,33 @@ const Index = () => {
           }
           <Route path="/activate/:id" element={<Verification />} />
 
-          {/* Route for  Blogs Below */}
+             {/*ROute for About Us*/}
+              <Route path="About us" element={<AboutUs/>}/>
 
-          {/* Route for  Jobs Below */}
 
-          {/* Route for  Cookies Below */}
+             {/* Route For Blog Below*/}
+              <Route path="blog" element={<Blog />} />
+               
 
-          {/* Route for  Terms & Conditions Below */}
+              {/* Route For Cookies Below*/}
+               <Route path="cookies" element={<Cookies />} />
 
-          {/* Route for  FAQ Below */}
+
+               {/* Route For Jobs Below*/}
+                <Route path="jobs" element={<Jobs />} />
+  
+
+                {/* Route For Terms and Conditions Below*/}
+                <Route path="terms and conditions" element={<TermsAndConditions />} />
+
+
+                 {/* Route For Contact and Help Below*/}
+                 <Route path="contact and help" element={<ContactAndHelp />} />
+
+
+                 {/* Route for FAQ */}
+                 <Route path="FAQ" element={<Faq />} />
+
 
           <Route path="*" element={<Error />} />
         </Routes>

@@ -38,16 +38,16 @@ const Footer = () => {
               <h4>Hjem</h4>
               <ul>
                 <li>
-                  <a href="#">About us</a>
+                  <a href="About us">About us</a>
                 </li>
                 <li>
-                  <a href="#">Blog</a>
+                  <a href="Blog">Blog</a>
                 </li>
                 <li>
-                  <a href="#">Cookies</a>
+                  <a href="Cookies">Cookies</a>
                 </li>
                 <li>
-                  <a href="#">Jobs</a>
+                  <a href="Jobs">Jobs</a>
                 </li>
               </ul>
             </div>
@@ -55,10 +55,10 @@ const Footer = () => {
               <h4>Support</h4>
               <ul>
                 <li>
-                  <a href="#">Terms & Conditions</a>
+                  <a href="Terms and Conditions">Terms & Conditions</a>
                 </li>
                 <li>
-                  <a href="#">Contact & Help</a>
+                  <a href="Contact and Help">Contact & Help</a>
                 </li>
               </ul>
             </div>
@@ -66,7 +66,7 @@ const Footer = () => {
               <h4>Quick Links</h4>
               <ul>
                 <li>
-                  <a href="#">FAQ</a>
+                  <a href="Faq">FAQ</a>
                 </li>
               </ul>
             </div>
