@@ -9,13 +9,36 @@ import SendIcon from "@mui/icons-material/Send";
 import "./styles.scss";
 
 import { ToastContainer, toast } from "react-toastify";
+import { RootState } from "../../redux/store";
+import { useSelector } from "react-redux";
 
 const SingleProperty = ({ property }: any) => {
-  console.log(property);
+  // Get the 'isLoggedIn' state from the customer slice using Redux useSelector hook
+  const isLoggedin = useSelector(
+    (state: RootState) => state.customer.data.isLoggedIn
+  );
+
+  // handleClick function
+  const handleClick = () => {
+    if (!isLoggedin) {
+      toast.error("Please login to view contact details", {
+        position: "bottom-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: false,
+        draggable: false,
+        progress: undefined,
+      });
+    }
+  };
+
+  console.log(isLoggedin);
+
   return (
     <div className="card mb-3 mt-5">
       <ToastContainer />
-      <Link to={`/property/${property.slug}`}>
+      <Link onClick={handleClick} to={`/property/${property.slug}`}>
         <img
           src={property.images[0]}
           className="img-fluid property__image"
@@ -62,7 +85,7 @@ const SingleProperty = ({ property }: any) => {
             </Link>
           </div>
           {/* Button to view contact details */}
-          <Link to={`/property/${property.slug}`}>
+          <Link onClick={handleClick} to={`/property/${property.slug}`}>
             <button className="card__button">View Contact</button>
           </Link>
         </div>

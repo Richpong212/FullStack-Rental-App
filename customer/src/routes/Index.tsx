@@ -65,7 +65,7 @@ const Index = () => {
           {
             // if the user is not logged in, go to home
             !isLoggedin ? (
-              <Route path="/property/:slug" element={<Home />} />
+              <Route path="/property/:slug" element={<Properties />} />
             ) : (
               // if the user is logged in, go to property
               <Route path="/property/:slug" element={<Property />} />
