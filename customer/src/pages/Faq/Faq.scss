@@ -8,17 +8,43 @@
     background-color: #edb985;
     box-shadow: 5px 5px 20px grey;
     overflow: hidden;
+    padding-left: 2rem;
+    margin: 4rem 4rem;
+   
    
 }
 
+.faq__text {
+    text-align: center;
+    text-indent: 3%;
+    
+    
+}
+
 .paragraph__card{
-    height: 110px;
-    width: 600px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 20px grey;
-    overflow: hidden;
+    height: 150px;
+    width: 680px;
+    border: 20px;
+    padding-bottom: 2rem;
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px rgb(185, 181, 181);
+    background-color: #f8f6f3;
+}
+
+.paragraph__cardTwo{
+    height: 90px;
+    width: 680px;
+    border: 20px;
+    padding-bottom: 2rem;
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px rgb(185, 181, 181);
+    background-color: #f8f6f3;
 }
 
 .faq__gap{
     padding: 2rem 4rem;
+}
+
+.paragraph__img {
+    padding-left: 0rem;
 }
