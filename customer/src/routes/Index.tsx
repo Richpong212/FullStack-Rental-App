@@ -17,7 +17,7 @@ import Jobs from "../pages/Jobs";
 import TermsAndConditions from "../pages/TermsAndConditions";
 import ContactAndHelp from "../pages/ContactAndHelp";
 import Faq from "../pages/Faq/Faq";
-import AboutUs from "../pages/AboutUs";
+import AboutUs from "../pages/AboutUs/AboutUs";
 import SearchResults from "../pages/Search-Results/SearchResults";
 
 const Index = () => {

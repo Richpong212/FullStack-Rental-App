@@ -24,6 +24,20 @@ const AboutUs = () => {
       
          }}>About
       </h1>  
+      <div className="row paragraphs__dif">
+         <p className="faq__gap col-4"> <h4>Our Mission</h4> Lorem ipsum dolor sit <br/>
+            laborum. Eveniet inventore<br/>
+            placeat ipsam explicabo sae<br/>
+            </p>
+            <p className="faq__gap col-4"> <h4>Our Mission</h4> Lorem ipsum dolor sit <br/>
+            laborum. Eveniet inventore<br/>
+            placeat ipsam explicabo sae<br/>
+            </p>
+            <p className="faq__gap col-4"> <h4>Our Mission</h4> Lorem ipsum dolor sit <br/>
+            laborum. Eveniet inventore<br/>
+            placeat ipsam explicabo sae<br/>
+            </p>
+      </div>
     </div>
     </div>
   )
