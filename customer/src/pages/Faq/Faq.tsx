@@ -21,50 +21,50 @@ const Faq = () => {
         fontWeight: "800",
         letterSpacing: "2px",
         paddingTop: "22rem",
-        paddingLeft: "2rem"
+        paddingLeft: "4rem"
       
          }}>Help Center
       </h1>  
     </div>
    <div className=" row faq__gap" >
-      <div className="col-7 faq__gap" style={{margin:"0rem", marginLeft: "1rem"}}>
+      <div className="col-7 faq__gap" style={{margin:"1rem 1rem",}}>
       <h2>
           Frequently 
           <p>Asked Questions</p> 
       </h2> 
       
-        <p> 
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit.  
-          saepe blanditiis, perspiciatis sequi repellendus sint 
-          iste quam maiores veniam ipsum dolorum quia tenetur. 
-          Impedit alias vel rerum voluptatibus! adipisci, est 
+        <p style={{paddingBottom:"1.5rem"}}> 
+          Lorem ipsum dolor, veniam ipsum sit amet consectetur adipisicing elit. <br/>
+          sit amet saepe blanditiis, perspiciatis sequi repellendus  sit ametsint <br/>
+          saepe blanditiis, perspiciatis sequi Impedit  maiores veniam ipsum iste <br/>
+          iste quam maiores veniam ipsum dolorum blanditiis, perspiciatis quia ten. 
         </p>
         
-        <div className="mb-3 mt-3 paragraph__card">
-        <p className="" style={{margin:"1rem", paddingBottom:"3rem"}}>
+        <div className="mt-3 paragraph__card">
+        <p className="" style={{margin:"1rem", paddingBottom:"1rem"}}>
           <h3 className="" style={{color:"#ECA760", paddingTop:"1rem"}}>Lorem ipsum dolor sit</h3>
-           Amet consectetur adipisicing elit. Tempore, 
-          saepe blanditiis, perspiciatis sequi Impedit 
-          repellendus sint adipisci, est iste quam 
-          maiores veniam ipsum dolorum quia tenetur.  
+          Amet consectetur adipisicing elit. Tempore,maiores veniam<br/> 
+          saepe blanditiis, perspiciatis sequi Impedit iquia stenetur. <br/>
+          repellendus sint adipisci, est iste quam ipsum dolorum sit. <br/>
+            
         </p>
-        <p className=" paragraph__cardTwo" style={{ paddingBottom:"3rem"}}>
+        <p className=" paragraph__cardTwo" style={{ paddingBottom:"2rem"}}>
           <h5 className="" style={{color:"#ECA760", margin:"1rem", paddingTop:"2rem"}}>Amet consectetur adipisicing elit Tempore</h5>
     
         </p>
-        <p className=" paragraph__cardTwo" style={{ paddingBottom:"3rem"}}>
-          <h5 className="" style={{color:"#ECA760", margin:"1rem", paddingTop:"2rem"}}>Amet consectetur adipisicing elit Tempore</h5>
+        <p className=" paragraph__cardTwo" style={{ paddingBottom:"2rem"}}>
+          <h5 className="" style={{color:"#ECA760", margin:"1rem", paddingTop:"2rem"}}>Maiores veniam ipsum dolorum quia tenetur</h5>
     
         </p>
-        <p className=" paragraph__cardTwo" style={{ paddingBottom:"3rem"}}>
-          <h5 className="" style={{color:"#ECA760", margin:"1rem", paddingTop:"2rem"}}>Amet consectetur adipisicing elit Tempore</h5>
+        <p className=" paragraph__cardTwo" style={{ paddingBottom:"5rem"}}>
+          <h5 className="" style={{color:"#ECA760", margin:"1rem", paddingTop:"2rem"}}>Lorem consectetur Sæper ipsum elit Tempore</h5>
     
         </p>
         </div>
       </div>
 
       <div className="col-5 card__faq paragraph__img" >
-      <img src="/assets/img/banner/FaqMan.jpg" className="rounded-start" style={{margin:"0rem", marginLeft: "0rem"}}/>
+      <img src="/assets/img/banner/FaqMan.jpg" className="rounded-start" />
       </div>
     </div>
  </div>
