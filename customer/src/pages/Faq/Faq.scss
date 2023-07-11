@@ -3,7 +3,7 @@
 }
 
 .card__faq {
-    height: 500px;
+    height: 400px;
     width: 400px;
     background-color: #edb985;
     box-shadow: 5px 5px 20px grey;
@@ -23,7 +23,7 @@
 
 .paragraph__card{
     height: 150px;
-    width: 680px;
+    width: 550px;
     border: 20px;
     padding-bottom: 2rem;
     border-radius: 5px;
@@ -33,7 +33,7 @@
 
 .paragraph__cardTwo{
     height: 90px;
-    width: 680px;
+    width: 550px;
     border: 20px;
     padding-bottom: 2rem;
     border-radius: 5px;
@@ -47,4 +47,7 @@
 
 .paragraph__img {
     padding-left: 0rem;
+    height: 600px;
+    position:relative;
+    
 }
