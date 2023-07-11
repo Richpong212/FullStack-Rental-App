@@ -18,6 +18,7 @@ import TermsAndConditions from "../pages/TermsAndConditions";
 import ContactAndHelp from "../pages/ContactAndHelp";
 import Faq from "../pages/Faq/Faq";
 import AboutUs from "../pages/AboutUs";
+import SearchResults from "../pages/Search-Results/SearchResults";
 
 const Index = () => {
   // isloggedin from redux
@@ -64,7 +65,7 @@ const Index = () => {
           {
             // if the user is not logged in, go to home
             !isLoggedin ? (
-              <Route path="/property/:slug" element={<Home />} />
+              <Route path="/property/:slug" element={<Properties />} />
             ) : (
               // if the user is logged in, go to property
               <Route path="/property/:slug" element={<Property />} />
@@ -72,33 +73,29 @@ const Index = () => {
           }
           <Route path="/activate/:id" element={<Verification />} />
 
-             {/*ROute for About Us*/}
-              <Route path="About us" element={<AboutUs/>}/>
+          {/* Route for search */}
+          <Route path="/search" element={<SearchResults />} />
 
+          {/*ROute for About Us*/}
+          <Route path="About us" element={<AboutUs />} />
 
-             {/* Route For Blog Below*/}
-              <Route path="blog" element={<Blog />} />
-               
+          {/* Route For Blog Below*/}
+          <Route path="blog" element={<Blog />} />
 
-              {/* Route For Cookies Below*/}
-               <Route path="cookies" element={<Cookies />} />
+          {/* Route For Cookies Below*/}
+          <Route path="cookies" element={<Cookies />} />
 
+          {/* Route For Jobs Below*/}
+          <Route path="jobs" element={<Jobs />} />
 
-               {/* Route For Jobs Below*/}
-                <Route path="jobs" element={<Jobs />} />
-  
+          {/* Route For Terms and Conditions Below*/}
+          <Route path="terms and conditions" element={<TermsAndConditions />} />
 
-                {/* Route For Terms and Conditions Below*/}
-                <Route path="terms and conditions" element={<TermsAndConditions />} />
+          {/* Route For Contact and Help Below*/}
+          <Route path="contact and help" element={<ContactAndHelp />} />
 
-
-                 {/* Route For Contact and Help Below*/}
-                 <Route path="contact and help" element={<ContactAndHelp />} />
-
-
-                 {/* Route for FAQ */}
-                 <Route path="FAQ" element={<Faq />} />
-
+          {/* Route for FAQ */}
+          <Route path="FAQ" element={<Faq />} />
 
           <Route path="*" element={<Error />} />
         </Routes>

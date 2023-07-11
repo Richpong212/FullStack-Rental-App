@@ -28,9 +28,9 @@ const AllProperties = () => {
           // Check if properties array is not empty
           properties.length > 0 ? (
             // Render each property using the PropertyCard component
-            properties.map((property: any) => (
-              <div className="col-lg-4 col-md-6 col-sm-12">
-                <PropertyCard key={property._id} property={property} />
+            properties.map((property: any, key: any) => (
+              <div key={property._id} className="col-lg-4 col-md-6 col-sm-12">
+                <PropertyCard property={property} />
               </div>
             ))
           ) : (

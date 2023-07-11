@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+
+    // Add the following options for React Native
+    "types": ["jest", "react-native"],
+    "esModuleInterop": true
+  }
+}
