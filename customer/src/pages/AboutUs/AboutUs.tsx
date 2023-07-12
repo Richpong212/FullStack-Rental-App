@@ -27,26 +27,29 @@ const AboutUs = () => {
          </div> 
          <div>
         <span className="row container mission__vision" >
-         <p className="faq__gap col-4"> <h1 style={{color:"#edb985"}}>01</h1>
-           <h4 className="fw-bold">Our Mission</h4> Lorem ipsum dolor sit <br/>
+         <p className="faq__gap col-4"> <h1 className="fw-bold aboutus__numbers">01</h1>
+           <h4 className="fw-bold">Our Mission</h4> 
+            Lorem ipsum dolor sit <br/>
             laborum. Eveniet inventore<br/>
-            placeat ipsam explicabo sae<br/>
+            placeat ipsam explicabo<br/>
           </p>
 
-          <p className="faq__gap col-4">  <h1 style={{color:"#edb985"}}>02</h1>
-            <h4 className="fw-bold">Our Vision</h4> Lorem ipsum dolor sit <br/>
+          <p className="faq__gap col-4">  <h1 className="fw-bold aboutus__numbers">02</h1>
+            <h4 className="fw-bold">Our Vision</h4> 
+            Lorem ipsum dolor sit <br/>
             laborum. Eveniet inventore<br/>
-            placeat ipsam explicabo sae<br/>
+            placeat ipsam explicabo<br/>
          </p>
 
-          <p className="faq__gap col-4">  <h1 style={{color:"#edb985"}}>03</h1>
-            <h4 className="fw-bold">Our Believe</h4> Lorem ipsum dolor sit <br/>
+          <p className="faq__gap col-4">  <h1 className="fw-bold aboutus__numbers">03</h1>
+            <h4 className="fw-bold">Our Believe</h4> 
+            Lorem ipsum dolor sit <br/>
             laborum. Eveniet inventore<br/>
-            placeat ipsam explicabo sae<br/>
+            placeat ipsam explicabo<br/>
           </p>
         </span>
-       <div className="container">
-
+       <div className="container missionVission__img">
+          <img src="/assets/img/banner/FaqMan.jpg" className="rounded-start" />
        </div>
      </div>
    </div>
