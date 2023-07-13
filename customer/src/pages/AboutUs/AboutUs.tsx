@@ -49,16 +49,17 @@ const AboutUs = () => {
           </p>
         </span>
         <div className="container">
-          <div className="col-6">
+          <div className="col-7">
              <div className=" missionVission__card">
              </div>
              <span className="card-img img">
                <img src="/assets/img/banner/aboutUsimg.jpg" className="rounded-start" />
              </span>
+             <div className="container col-5 " >
+            <h2 >About us</h2>
           </div>
-          <div className="col-6">
-            About our Mission and Vision
           </div>
+  
        </div>
      </div>
    </div>
