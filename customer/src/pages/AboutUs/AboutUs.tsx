@@ -48,8 +48,12 @@ const AboutUs = () => {
             placeat ipsam explicabo<br/>
           </p>
         </span>
-       <div className="container missionVission__img">
+        <div>
+       <div className="container missionVission__card">
+       </div>
+        <span className="missionVission__img">
           <img src="/assets/img/banner/FaqMan.jpg" className="rounded-start" />
+        </span>
        </div>
      </div>
    </div>
