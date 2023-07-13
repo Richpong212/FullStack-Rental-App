@@ -51,7 +51,7 @@ const AboutUs = () => {
         <div>
        <div className="container missionVission__card">
        </div>
-        <span className="missionVission__img">
+        <span className="card-img img">
           <img src="/assets/img/banner/FaqMan.jpg" className="rounded-start" />
         </span>
        </div>
