@@ -6,26 +6,28 @@
 }
 
 .aboutus__numbers{
-    color:#edb985
+    color:#f0b57a
 }
 
 .missionVission__card{
-    height: 220px;
-    width: 240px;
-    background-color: #edb985;
+    height: 200px;
+    width: 230px;
+    background-color: #f0b06f;
     box-shadow: 5px 5px 20px grey;
     overflow: hidden;
     border-radius: 10px;
-    margin: 1rem 7rem;
+    margin: 0rem 7rem;
+    z-index:1;
 }
 
 .card-img img{
-   margin: 2rem 12rem;
-    height: 500px;
-    width: 550px;
+    height: 380px;
+    width: 520px;
     box-shadow: 5px 5px 20px grey;
     overflow: hidden;
     border-radius: 10px;
-    margin: 1rem 7rem;
+    margin-top: -9rem;
+    margin-bottom: 7rem;
+    margin-left: 10rem;
    
 }
