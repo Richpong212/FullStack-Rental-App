@@ -6,13 +6,13 @@
 }
 
 .aboutus__numbers{
-    color:#f0b57a
+    color:#efa357
 }
 
 .missionVission__card{
     height: 200px;
     width: 230px;
-    background-color: #f0b06f;
+    background-color: #efa357;
     box-shadow: 5px 5px 20px grey;
     overflow: hidden;
     border-radius: 10px;
@@ -26,13 +26,15 @@
     box-shadow: 5px 5px 20px grey;
     overflow: hidden;
     border-radius: 10px;
-    margin-top: -9rem;
+    margin-top: -10rem;
     margin-bottom: 7rem;
-    margin-left: 10rem;
+    margin-left: 9rem;
    
 }
 
 .our__paragraph{
-    margin-left: 10rem;
-    
+    display: flex;
+    margin-left: 1rem;
+
+
 }
