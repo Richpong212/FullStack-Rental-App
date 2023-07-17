@@ -1,4 +1,40 @@
-.paragraphs__dif{
+.mission__vision{
+   align-items: center;
+    padding: 3rem 12rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.aboutus__numbers{
+    color:#efa357
+}
+
+.missionVission__card{
+    height: 200px;
+    width: 230px;
+    background-color: #efa357;
+    box-shadow: 5px 5px 20px grey;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 0rem 7rem;
+    z-index:1;
+}
+
+.card-img img{
+    height: 380px;
+    width: 520px;
+    box-shadow: 5px 5px 20px grey;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: -10rem;
+    margin-bottom: 7rem;
+    margin-left: 9rem;
    
-    padding: 3rem 3rem;
+}
+
+.our__paragraph{
+    display: flex;
+    margin-left: 1rem;
+
+
 }
