@@ -31,8 +31,6 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
     (state: RootState) => state.customer.data.isLoggedIn
   );
 
-  console.log(property);
-
   // handleClick function
   const handleClick = () => {
     if (!isLoggedin) {
