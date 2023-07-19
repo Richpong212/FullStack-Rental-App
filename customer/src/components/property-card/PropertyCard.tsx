@@ -18,6 +18,10 @@ interface PropertyCardProps {
     title: string;
     price: number;
     bedroom: number;
+    bathroom: number;
+    rating: number;
+    parking: number;
+    size: number;
   };
 }
 
@@ -26,6 +30,8 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
   const isLoggedin = useSelector(
     (state: RootState) => state.customer.data.isLoggedIn
   );
+
+  console.log(property);
 
   // handleClick function
   const handleClick = () => {
@@ -72,11 +78,11 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
           </div>
           <div className="d-flex gap-1 featured__icon">
             <ShowerIcon className="icon__bottom" />
-            <span>3 Bath</span>
+            <span>{property.bathroom} Bath</span>
           </div>
           <div className="d-flex gap-1 featured__icon">
             <CropFreeIcon className="icon__bottom" />
-            <span>290 sq.</span>
+            <span>{property.size} sq.</span>
           </div>
         </div>
         {/* Display contact options */}
