@@ -29,12 +29,61 @@
     margin-top: -10rem;
     margin-bottom: 7rem;
     margin-left: 9rem;
-   
 }
 
 .our__paragraph{
     display: flex;
     margin-left: 1rem;
-
-
 }
+
+.learnMore__btn{
+    background-color: #efa357;
+    color: #fff;
+    width: 150px;
+    height: 45px;
+    border-radius: 5px;
+    border: none;
+    margin-left:"0rem";
+    padding-left: "0rem";
+}
+
+
+.service__area{
+    display: flex;
+    align-items: center;
+    padding: 3rem 12rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+.service__card{
+    height: 250px;
+    width: 300px;
+   background-color: #fff;
+    border: #fff;
+    box-shadow: 5px 5px 30px rgb(246, 243, 243);
+    overflow: hidden;
+    border-radius: 10px;
+    padding-left: 7rem;
+    
+   
+}
+    .servicelittle__card{
+        height: 30px;
+        width: 25px;
+        background-color: #efa357;
+        box-shadow: 5px 5px 20px rgb(246, 243, 243);
+        overflow: hidden;
+        border-radius: 10px;
+        margin: 0rem rem;
+        z-index:1;
+    }
+    
+    .card2__img img{
+        height: 600px;
+        width: 680px;
+        overflow: hidden;
+        border-radius: 10px;
+        margin-top: -10rem;
+        margin-left: 0rem;
+        z-index: 1;
+    }

@@ -75,11 +75,33 @@ const AboutUs = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, 
               repudiandae doloremque vel nulla at laborum autem sit rem harum! 
               Nostrum esse ipsa saepe dolore tenetur, ullam corrupti excepturi 
-              eaque doloremque vel nulla at laborum modi?</p>
-              <button style={{marginLeft:"-2rem"}}>Learn More</button>
+              eaque doloremque vel nulla at laborum modi?
+            </p>
+              <button className="learnMore__btn">Learn More</button>
           </div>
        </div>
-      
+
+            {/*Service area*/}
+        <div className="container faq__gap">
+          Best Service
+        </div>
+        <div className="container" style={{paddingLeft:"3rem"}}>
+          <h2 >These Are The Services We Provide</h2>
+          <p>
+          Through our partnership with our neighborhood specialist we rent your 
+          house<br/> or apartment, Combined
+          with our high level marketing approach, and negotiation skills.
+          </p>
+        </div>
+        
+        <div className="d-flex gap-3 " style={{paddingLeft:"3rem"}}>
+            <div className="service__card">Marketing</div>
+            <div className="service__card">Marketing</div>
+            <div className="service__card">Marketing</div>
+            <span className="card2__img img">
+               <img src="/assets/img/banner/serviceimg.webp" className="rounded-start" />
+             </span>
+        </div>
      </div>
    </div>
   )
