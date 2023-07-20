@@ -4,6 +4,7 @@ import AddIcon from "@mui/icons-material/Add";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { logout } from "../../../redux/Slice/customerSlice";
+import { toast, ToastContainer } from "react-toastify";
 
 const NavigationBar = () => {
   let publicUrl = process.env.PUBLIC_URL;
@@ -23,8 +24,28 @@ const NavigationBar = () => {
     navigate("/");
   };
 
+  // handle create property
+  const handleCreate = () => {
+    if (isLoggedin) {
+      navigate("/create-property");
+    } else {
+      toast("Please login to add property", {
+        type: "error",
+        position: "top-right",
+        pauseOnHover: false,
+        autoClose: 3000,
+        hideProgressBar: true,
+        //hide the shadow of the toast
+        style: {
+          boxShadow: "none",
+        },
+      });
+    }
+  };
+
   return (
     <nav className=" globalstyles navbar navbar-expand-lg bg-body-tertiary">
+      <ToastContainer />
       <div className="container-fluid">
         <div>
           <a data-testid="nav__logo" className="navbar-brand" href="/">
@@ -109,11 +130,15 @@ const NavigationBar = () => {
               </ul>
             </li>
           </ul>
-          <Link to="/create-property">
-            <button className="btn desktop-navbutton " type="submit">
+          <>
+            <button
+              onClick={handleCreate}
+              className="btn desktop-navbutton "
+              type="submit"
+            >
               Add Property <AddIcon />
             </button>
-          </Link>
+          </>
         </div>
       </div>
     </nav>
