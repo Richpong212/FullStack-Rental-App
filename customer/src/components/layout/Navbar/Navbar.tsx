@@ -34,6 +34,7 @@ const NavigationBar = () => {
         position: "top-right",
         pauseOnHover: false,
         autoClose: 3000,
+        closeOnClick: true,
         hideProgressBar: true,
         //hide the shadow of the toast
         style: {
@@ -54,11 +55,11 @@ const NavigationBar = () => {
         </div>
 
         <div className="d-flex">
-          <Link to="/create-property">
-            <button className="btn mobile-navbutton ">
+          <>
+            <button onClick={handleCreate} className="btn mobile-navbutton ">
               Add Property <AddIcon />
             </button>
-          </Link>
+          </>
           <button
             className="navbar-toggler"
             type="button"
