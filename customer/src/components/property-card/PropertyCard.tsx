@@ -47,7 +47,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
   };
 
   return (
-    <div className="card mb-3 mt-5">
+    <div className=" card mb-3 mt-5">
       <ToastContainer />
       <Link to={`/property/${property.slug}`}>
         <img
