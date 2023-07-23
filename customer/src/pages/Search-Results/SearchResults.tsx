@@ -25,13 +25,16 @@ const SearchResults = () => {
   const groupedProperties = groupPropertiesInRows(filteredProperties);
 
   return (
-    <div className=" ms-5 me-5 search">
-      <h1>Search Results</h1>
+    <div className="search-results-container">
+      <h1 className="search-results-title">Search Results</h1>
       {groupedProperties.map((row: any[], index: number) => (
         // Display each row containing four properties
         <div className="row" key={index}>
           {row.map((property: any) => (
-            <div className="col-md-3" key={property.slug}>
+            <div
+              className="col-lg-6 col-xl-4 col-md-6 col-sm-12"
+              key={property.slug}
+            >
               <SingleProperty property={property} />
             </div>
           ))}
