@@ -11,7 +11,7 @@ const Home = () => {
   const publicUrl = process.env.PUBLIC_URL;
 
   return (
-    <div>
+    <div className="home-page">
       <div
         style={{
           backgroundImage: "url(" + publicUrl + "/assets/img/banner/home2.jpg)",
@@ -19,26 +19,28 @@ const Home = () => {
           backgroundSize: "cover",
           backgroundPosition: "center center",
           width: "100%",
-          height: "70vh",
+          height: "55vh",
         }}
-        className="globalstyles"
+        className="home-banner"
       >
-        <div className="home container ">
-          <span>The Best Way to</span>
-          <div>
-            <h2>Find Your Perfect Home</h2>
-          </div>
-          <div className="search">
+        <div className="home container">
+          <span className="home-subtitle">
+            The Best Way to Find Your Perfect Home
+          </span>
+          <h1 className="home-title">Find Your Dream Home Today</h1>
+          <div className="search-bar">
             <SearchBar />
           </div>
         </div>
       </div>
-      {
-        // Featured Property
-        <FeaturedProperty />
-      }
-      <AllProperties />
-      <EstateAgent />
+
+      <div className="featured-properties">
+        <FeaturedProperty limit={6} />
+      </div>
+
+      <div className="estate-agent-banner">
+        <EstateAgent />
+      </div>
     </div>
   );
 };

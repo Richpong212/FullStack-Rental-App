@@ -6,7 +6,7 @@ const Properties = () => {
   return (
     <div>
       <PropertiesHeader />
-      <AllProperties />
+      <AllProperties itemsPerPage={12} />
     </div>
   );
 };
