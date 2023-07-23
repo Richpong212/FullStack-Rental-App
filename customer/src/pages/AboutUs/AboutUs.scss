@@ -15,14 +15,14 @@
     background-color: #efa357;
     box-shadow: 5px 5px 20px grey;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 7px;
     margin: 0rem 7rem;
     z-index:1;
 }
 
 .card-img img{
-    height: 380px;
-    width: 520px;
+    height: 400px;
+    width: 540px;
     box-shadow: 5px 5px 20px grey;
     overflow: hidden;
     border-radius: 10px;
@@ -57,13 +57,14 @@
 }
 .service__card{
     height: 250px;
-    width: 300px;
-   background-color: #fff;
-    border: #fff;
-    box-shadow: 5px 5px 30px rgb(246, 243, 243);
+    width: 350px;
+    background-color: #ebe8e8;
     overflow: hidden;
     border-radius: 10px;
-    padding-left: 7rem;
+    margin-top: 2rem;
+    text-align: center;
+    align-self: center;
+    margin: 3rem 2rem;
     
    
 }
@@ -74,16 +75,24 @@
         box-shadow: 5px 5px 20px rgb(246, 243, 243);
         overflow: hidden;
         border-radius: 10px;
-        margin: 0rem rem;
         z-index:1;
     }
     
     .card2__img img{
         height: 600px;
-        width: 680px;
-        overflow: hidden;
+        width: 700px;
+        overflow:h;
         border-radius: 10px;
         margin-top: -10rem;
-        margin-left: 0rem;
-        z-index: 1;
+        margin-left: -31rem;
+       
+    }
+
+    .aboutus__container{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .bg__img{
+        filter: brightness(70%);
     }

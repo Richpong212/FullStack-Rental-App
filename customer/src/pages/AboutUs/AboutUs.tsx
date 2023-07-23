@@ -82,7 +82,7 @@ const AboutUs = () => {
        </div>
 
             {/*Service area*/}
-        <div className="container faq__gap">
+        <div style={{color:"#efa357", fontSize:"160%"}} className="container faq__gap">
           Best Service
         </div>
         <div className="container" style={{paddingLeft:"3rem"}}>
@@ -94,14 +94,17 @@ const AboutUs = () => {
           </p>
         </div>
         
-        <div className="d-flex gap-3 " style={{paddingLeft:"3rem"}}>
-            <div className="service__card">Marketing</div>
-            <div className="service__card">Marketing</div>
-            <div className="service__card">Marketing</div>
-            <span className="card2__img img">
-               <img src="/assets/img/banner/serviceimg.webp" className="rounded-start" />
-             </span>
+        <div className="aboutus__container" >
+          <div style={{flex:"2", display:"flex", marginLeft:"5rem", zIndex:"1"}}>
+            <div className="service__card"> <h2 style={{alignItems:"center"}}
+            >Marketing Analysis</h2> </div>
+            <div className="service__card"> <h2>Business Consultancy</h2> </div>
+            <div className="service__card"> <h2>Planning</h2> </div>
         </div>
+        <div className="card2__img img bg__img"  style={{flex:"1"}}>
+               <img src="/assets/img/banner/Serviceimg2.jpg" className="rounded-start" />
+             </div>
+        </div>      
      </div>
    </div>
   )
