@@ -1,24 +1,69 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Featured.scss";
-import PersonIcon from "@mui/icons-material/Person";
-import BedIcon from "@mui/icons-material/Bed";
-import ShowerIcon from "@mui/icons-material/Shower";
-import CropFreeIcon from "@mui/icons-material/CropFree";
-import { Link, NavLink } from "react-router-dom";
-import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import SendIcon from "@mui/icons-material/Send";
+import PropertyCard from "../property-card/PropertyCard";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllProperty } from "../../service/property.service";
 
-const Featured_Property = () => {
-  const url =
-    "https://thumbs.cityrealty.com/assets/smart/736x/webp/1/16/1655f4e3904fb79cb987ab7755d2b3f4b8f37f88/1-city-point.jpg";
+interface FeaturedPropertyProps {
+  limit: number;
+}
+
+const FeaturedProperty: React.FC<FeaturedPropertyProps> = ({ limit }) => {
+  // Dispatch action to get all properties
+  const dispatch = useDispatch();
+
+  // useEffect to get all properties
+  useEffect(() => {
+    // Dispatch action to get all properties
+    getAllProperty(dispatch);
+  }, [dispatch]);
+
+  // Get all properties from the Redux store
+  const properties = useSelector((state: any) => state.properties.properties);
+
+  // Limit the number of properties to display
+  const limitedProperties = properties.slice(0, limit);
+
+  // URL to All Properties page
+  const allPropertiesUrl = "/properties";
 
   return (
     <div className="featured__container">
       <div className="featured__title text-center">
         <h1 className="title">Featured Properties</h1>
       </div>
+      <div className="container" style={{ padding: "0 5rem" }}>
+        <div className="row">
+          <div className="col">
+            <h2 className="section-title">Featured Properties</h2>
+          </div>
+        </div>
+        <div className="row">
+          {limitedProperties.length > 0 ? (
+            limitedProperties.map((property: any, key: number) => (
+              <div key={property._id} className="col-lg-4 col-md-6 col-sm-12">
+                <PropertyCard property={property} />
+              </div>
+            ))
+          ) : (
+            <div className="col">
+              <h3>No Featured Properties Found</h3>
+            </div>
+          )}
+        </div>
+        {properties.length > limit && (
+          <div className="row mt-4">
+            <div className="col text-center">
+              {/* Button to go to All Properties */}
+              <a href={allPropertiesUrl} className="btn globalbuttonstyles">
+                View All Properties
+              </a>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
 
-export default Featured_Property;
+export default FeaturedProperty;

@@ -4,6 +4,7 @@ import AddIcon from "@mui/icons-material/Add";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { logout } from "../../../redux/Slice/customerSlice";
+import { toast, ToastContainer } from "react-toastify";
 
 const NavigationBar = () => {
   let publicUrl = process.env.PUBLIC_URL;
@@ -23,21 +24,38 @@ const NavigationBar = () => {
     navigate("/");
   };
 
-  return (
-    <nav className=" globalstyles navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container-fluid">
-        <div>
-          <a data-testid="nav__logo" className="navbar-brand" href="/">
-            <img src={`${publicUrl}/assets/img/logo.png`} alt="logo" />
-          </a>
-        </div>
+  // handle create property
+  const handleCreate = () => {
+    if (isLoggedin) {
+      navigate("/create-property");
+    } else {
+      toast("Please login to add property", {
+        type: "error",
+        position: "top-right",
+        pauseOnHover: false,
+        autoClose: 3000,
+        closeOnClick: true,
+        hideProgressBar: true,
+        //hide the shadow of the toast
+        style: {
+          boxShadow: "none",
+        },
+      });
+    }
+  };
 
-        <div className="d-flex">
-          <Link to="/create-property">
-            <button className="btn mobile-navbutton ">
-              Add Property <AddIcon />
-            </button>
-          </Link>
+  return (
+    <nav className="globalstyles navbar navbar-expand-lg bg-body-tertiary">
+      <ToastContainer />
+      <div className="container-fluid">
+        <Link to="/" className="navbar-brand">
+          <img src={`${publicUrl}/assets/img/logo.png`} alt="logo" />
+        </Link>
+
+        <div className="d-flex align-items-center">
+          <button onClick={handleCreate} className="btn mobile-navbutton">
+            Add Property <AddIcon />
+          </button>
           <button
             className="navbar-toggler"
             type="button"
@@ -52,21 +70,21 @@ const NavigationBar = () => {
         </div>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/">
+              <Link to="/" className="nav-link active">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/properties">
+              <Link to="/properties" className="nav-link">
                 Properties
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/contact">
+              <Link to="/contact" className="nav-link">
                 Contact Us
-              </a>
+              </Link>
             </li>
             <li className="nav-item dropdown">
               <span
@@ -78,42 +96,40 @@ const NavigationBar = () => {
                 Profile
               </span>
               <ul className="dropdown-menu">
-                {
-                  // if the user is not logged  show login and register
-                  !isLoggedin && (
-                    <>
-                      <li>
-                        <a className="dropdown-item" href="/login">
-                          Login
-                        </a>
-                      </li>
-                      <li>
-                        <a className="dropdown-item" href="/register">
-                          Register
-                        </a>
-                      </li>
-                    </>
-                  )
-                }
-                <li>
-                  {isLoggedin && (
+                {!isLoggedin ? (
+                  <>
+                    <li>
+                      <Link to="/login" className="dropdown-item">
+                        Login
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/register" className="dropdown-item">
+                        Register
+                      </Link>
+                    </li>
+                  </>
+                ) : (
+                  <li>
                     <span
                       style={{ cursor: "pointer" }}
                       onClick={handleLogOut}
                       className="dropdown-item"
                     >
-                      logout
+                      Logout
                     </span>
-                  )}
-                </li>
+                  </li>
+                )}
               </ul>
             </li>
           </ul>
-          <Link to="/create-property">
-            <button className="btn desktop-navbutton " type="submit">
-              Add Property <AddIcon />
-            </button>
-          </Link>
+          <button
+            onClick={handleCreate}
+            className="btn desktop-navbutton"
+            type="submit"
+          >
+            Add Property <AddIcon />
+          </button>
         </div>
       </div>
     </nav>
