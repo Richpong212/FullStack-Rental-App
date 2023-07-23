@@ -89,22 +89,25 @@ const AboutUs = () => {
           <h2 >These Are The Services We Provide</h2>
           <p>
           Through our partnership with our neighborhood specialist we rent your 
-          house<br/> or apartment, Combined
-          with our high level marketing approach, and negotiation skills.
+          house or <br/> apartment, Combined
+          with our high level marketing approach, negotiation skills.
           </p>
         </div>
-        
-        <div className="aboutus__container" >
-          <div style={{flex:"2", display:"flex", marginLeft:"5rem", zIndex:"1"}}>
-            <div className="service__card"> <h2 style={{alignItems:"center"}}
-            >Marketing Analysis</h2> </div>
-            <div className="service__card"> <h2>Business Consultancy</h2> </div>
-            <div className="service__card"> <h2>Planning</h2> </div>
-        </div>
-        <div className="card2__img img bg__img"  style={{flex:"1"}}>
+
+        <div className="d-flex">
+          <div className="row ">
+            <div className="service__card "><h2>Marketing Analysis</h2></div>
+            <div className="service__card "><h2>Marketing Analysis</h2></div>
+            <div className="service__card "><h2>Marketing Analysis</h2></div>
+          </div>
+             <div className="card2__img img bg__img " >
                <img src="/assets/img/banner/Serviceimg2.jpg" className="rounded-start" />
              </div>
-        </div>      
+      
+       </div>
+
+
+          
      </div>
    </div>
   )

@@ -48,51 +48,46 @@
 }
 
 
-.service__area{
-    display: flex;
-    align-items: center;
-    padding: 3rem 12rem;
-    margin-bottom: 1rem;
-    align-items: center;
-}
-.service__card{
-    height: 250px;
-    width: 350px;
-    background-color: #ebe8e8;
-    overflow: hidden;
+
+.card2__img img{
+    height: 600px;
+    width: 700px;
+    overflow:h;
     border-radius: 10px;
-    margin-top: 2rem;
-    text-align: center;
-    align-self: center;
-    margin: 3rem 2rem;
-    
+    margin-top: -11rem;
+    margin-left: -30rem;
+
    
 }
+
     .servicelittle__card{
-        height: 30px;
-        width: 25px;
+        height: 55px;
+        width: 55px;
         background-color: #efa357;
         box-shadow: 5px 5px 20px rgb(246, 243, 243);
         overflow: hidden;
-        border-radius: 10px;
+        border-radius: 3px;
         z-index:1;
     }
-    
-    .card2__img img{
-        height: 600px;
-        width: 700px;
-        overflow:h;
-        border-radius: 10px;
-        margin-top: -10rem;
-        margin-left: -31rem;
-       
-    }
 
-    .aboutus__container{
-        display: flex;
-        flex-direction: row;
+    .service__card{
+        height: 250px;
+        width: 350px;
+        background-color: #ebe8e8;
+        overflow: hidden;
+        border-radius: 10px;
+        text-align: center;
+        align-items: center;
+         margin: 2rem;
+        margin-left: 2rem;
+        
     }
 
     .bg__img{
-        filter: brightness(70%);
+        filter: brightness(60%);
+        z-index: -1;
+    }
+
+    .container__about{
+        padding-left: 7rem;
     }
