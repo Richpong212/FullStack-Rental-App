@@ -3,6 +3,7 @@ import "./Featured.scss";
 import PropertyCard from "../property-card/PropertyCard";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllProperty } from "../../service/property.service";
+import Loading from "../lottie-animations/Loading";
 
 interface FeaturedPropertyProps {
   limit: number;
@@ -47,7 +48,7 @@ const FeaturedProperty: React.FC<FeaturedPropertyProps> = ({ limit }) => {
             ))
           ) : (
             <div className="col">
-              <h3>No Featured Properties Found</h3>
+              <Loading />
             </div>
           )}
         </div>

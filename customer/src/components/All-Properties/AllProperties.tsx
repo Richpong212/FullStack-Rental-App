@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import PropertyCard from "../property-card/PropertyCard";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllProperty } from "../../service/property.service";
+import Loading from "../lottie-animations/Loading";
 
 interface AllPropertiesProps {
   itemsPerPage: number;
@@ -52,7 +53,7 @@ const AllProperties: React.FC<AllPropertiesProps> = ({ itemsPerPage }) => {
           ))
         ) : (
           <div className="col">
-            <h3>No Featured Properties Found</h3>
+            <Loading />
           </div>
         )}
       </div>
