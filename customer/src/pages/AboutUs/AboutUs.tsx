@@ -82,23 +82,43 @@ const AboutUs = () => {
        </div>
 
             {/*Service area*/}
-        <div style={{color:"#efa357", fontSize:"160%"}} className="container faq__gap">
+      <div className="container faq__gap" style={{padding:"3rem 3rem",}}>
+        <div style={{color:"#efa357", fontSize:"160%", marginBottom:"2rem"}} >
           Best Service
         </div>
-        <div className="container" style={{paddingLeft:"3rem"}}>
+        <div>
           <h2 >These Are The Services We Provide</h2>
           <p>
           Through our partnership with our neighborhood specialist we rent your 
           house or <br/> apartment, Combined
           with our high level marketing approach, negotiation skills.
           </p>
-        </div>
+          </div>
+      </div>
 
-        <div className="d-flex">
-          <div className="row ">
-            <div className="service__card "><h2>Marketing Analysis</h2></div>
-            <div className="service__card "><h2>Marketing Analysis</h2></div>
-            <div className="service__card "><h2>Marketing Analysis</h2></div>
+        <div className="container__about">
+          <div className="row container faq__gap" >
+             <div className="service__card"><h4 style={{paddingTop:"3rem"}}
+               >Marketing Analysis</h4>
+               <p>Describe your home online and get
+                  <br/> your appraisal in 5 minutes
+               </p>
+             </div>
+
+              <div className="service__card "><h4  style={{paddingTop:"3rem"}}
+                >Marketing Analysis</h4>
+                <p>Describe your home online and get
+                  <br/> your appraisal in 5 minutes
+                </p>
+               </div>
+
+            <div className="service__card "><h4 style={{paddingTop:"3rem"}}
+            >Marketing Analysis</h4>
+            <p>Describe your home online and get
+                  <br/> your appraisal in 5 minutes
+               </p>
+            </div>
+
           </div>
              <div className="card2__img img bg__img " >
                <img src="/assets/img/banner/Serviceimg2.jpg" className="rounded-start" />

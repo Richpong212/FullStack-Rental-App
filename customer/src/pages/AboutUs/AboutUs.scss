@@ -50,19 +50,19 @@
 
 
 .card2__img img{
-    height: 600px;
+    height: 630px;
     width: 700px;
     overflow:h;
     border-radius: 10px;
-    margin-top: -11rem;
+    margin-top: -14rem;
     margin-left: -30rem;
 
    
 }
 
     .servicelittle__card{
-        height: 55px;
-        width: 55px;
+        height: 50px;
+        width: 50px;
         background-color: #efa357;
         box-shadow: 5px 5px 20px rgb(246, 243, 243);
         overflow: hidden;
@@ -78,8 +78,8 @@
         border-radius: 10px;
         text-align: center;
         align-items: center;
-         margin: 2rem;
-        margin-left: 2rem;
+        margin-left: 1.2rem;
+        padding-right: 0%;
         
     }
 
@@ -89,5 +89,6 @@
     }
 
     .container__about{
-        padding-left: 7rem;
+        padding-left: 2rem;
+        display: flex;
     }
