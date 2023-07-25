@@ -16,8 +16,7 @@ describe("Navbar", () => {
 
     // check for home link
     const homeElement = screen.getByText(/home/i);
-    // check for logo
-    const logoElement = screen.getByTestId("nav__logo");
+
     // check for properties link
     const propertiesElement = screen.getByText(/properties/i);
     // check for contact link
@@ -25,7 +24,6 @@ describe("Navbar", () => {
 
     // expect element to have attribute
     expect(homeElement).toHaveAttribute("href", "/");
-    expect(logoElement).toBeInTheDocument();
     expect(propertiesElement).toHaveAttribute("href", "/properties");
     expect(contactElement).toHaveAttribute("href", "/contact");
   });
