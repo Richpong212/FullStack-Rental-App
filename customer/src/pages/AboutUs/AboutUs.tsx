@@ -82,26 +82,52 @@ const AboutUs = () => {
        </div>
 
             {/*Service area*/}
-        <div className="container faq__gap">
+      <div className="container faq__gap" style={{padding:"3rem 3rem",}}>
+        <div style={{color:"#efa357", fontSize:"160%", marginBottom:"2rem"}} >
           Best Service
         </div>
-        <div className="container" style={{paddingLeft:"3rem"}}>
+        <div>
           <h2 >These Are The Services We Provide</h2>
           <p>
           Through our partnership with our neighborhood specialist we rent your 
-          house<br/> or apartment, Combined
-          with our high level marketing approach, and negotiation skills.
+          house or <br/> apartment, Combined
+          with our high level marketing approach, negotiation skills.
           </p>
-        </div>
-        
-        <div className="d-flex gap-3 " style={{paddingLeft:"3rem"}}>
-            <div className="service__card">Marketing</div>
-            <div className="service__card">Marketing</div>
-            <div className="service__card">Marketing</div>
-            <span className="card2__img img">
-               <img src="/assets/img/banner/serviceimg.webp" className="rounded-start" />
-             </span>
-        </div>
+          </div>
+      </div>
+
+        <div className="container__about">
+          <div className="row container faq__gap" >
+             <div className="service__card"><h4 style={{paddingTop:"3rem"}}
+               >Marketing Analysis</h4>
+               <p>Describe your home online and get
+                  <br/> your appraisal in 5 minutes
+               </p>
+             </div>
+
+              <div className="service__card "><h4  style={{paddingTop:"3rem"}}
+                >Marketing Analysis</h4>
+                <p>Describe your home online and get
+                  <br/> your appraisal in 5 minutes
+                </p>
+               </div>
+
+            <div className="service__card "><h4 style={{paddingTop:"3rem"}}
+            >Marketing Analysis</h4>
+            <p>Describe your home online and get
+                  <br/> your appraisal in 5 minutes
+               </p>
+            </div>
+
+          </div>
+             <div className="card2__img img bg__img " >
+               <img src="/assets/img/banner/Serviceimg2.jpg" className="rounded-start" />
+             </div>
+      
+       </div>
+
+
+          
      </div>
    </div>
   )
