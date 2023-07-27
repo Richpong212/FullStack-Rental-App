@@ -42,6 +42,13 @@
   }
 }
 
+// tablet styles for navbar
+@media (min-width: 768px) {
+  .navbar {
+    padding: 1rem 3rem;
+  }
+}
+
 //hide desktop navbar on mobile and tablet
 @media (max-width: 768px) {
   .desktop-navbutton {
