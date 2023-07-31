@@ -19,6 +19,7 @@ import ContactAndHelp from "../pages/ContactAndHelp";
 import Faq from "../pages/Faq/Faq";
 import AboutUs from "../pages/AboutUs/AboutUs";
 import SearchResults from "../pages/Search-Results/SearchResults";
+import TemFooter from "../components/layout/Footer/TemFooter";
 
 const Index = () => {
   // isloggedin from redux
@@ -101,7 +102,8 @@ const Index = () => {
         </Routes>
       </main>
       <footer>
-        <Footer />
+        {/* <Footer /> */}
+        <TemFooter />
       </footer>
     </BrowserRouter>
   );

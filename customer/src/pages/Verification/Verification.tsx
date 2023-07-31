@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import jwtDecode from "jwt-decode";
 import { activateUser } from "../../service/customer.service";
 import { ToastContainer, toast } from "react-toastify";
+import Loading from "../../components/lottie-animations/Loading";
 
 const Verification = () => {
   const [name, setName] = useState("");
@@ -62,6 +63,7 @@ const Verification = () => {
       <div className="verify__container">
         <h4 className="verify__title">Welcome {name}</h4>
         <p className="verify__text">Verification in progress...</p>
+        <Loading />
       </div>
     </div>
   );
