@@ -73,6 +73,7 @@ export const activateAccount = async (req: Request, res: Response) => {
     const newUser = new User({
       ...decoded,
       isVerified: true,
+      isAdmin: true,
     });
 
     // save user
@@ -108,8 +109,8 @@ export const loginUser = async (req: Request, res: Response) => {
       user: {
         fullName: user.fullName,
         email: user.email,
-        isVerified: user.isAdmin,
-        isAdmin: user.isVerified,
+        isVerified: user.isVerified,
+        isAdmin: user.isAdmin,
       },
       token,
     });
