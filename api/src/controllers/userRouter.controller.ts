@@ -20,7 +20,7 @@ export const registerUser = async (req: Request, res: Response) => {
 
     // save user temporarily in a token
     const token = jwt.sign(
-      { fullName, email, password: hasedPassword, phone },
+      { fullName, email, password: hasedPassword, phone, isAdmin: true },
       String(process.env.JWT_SECRET),
       { expiresIn: "10m" }
     );
@@ -73,7 +73,6 @@ export const activateAccount = async (req: Request, res: Response) => {
     const newUser = new User({
       ...decoded,
       isVerified: true,
-      isAdmin: true,
     });
 
     // save user
