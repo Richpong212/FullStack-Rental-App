@@ -1,6 +1,7 @@
 import React from "react";
 import "./banner.scss";
 import { red } from "@mui/material/colors";
+import { Link } from "react-router-dom";
 
 const EstateAgent = () => {
   // Setting up background icon
@@ -41,9 +42,9 @@ const EstateAgent = () => {
         ></div>
 
         {/* Register Button */}
-        <div>
+        <Link to={"/register"}>
           <button className="estateagent__registerbtn ">Register Now</button>
-        </div>
+        </Link>
       </div>
     </div>
   );

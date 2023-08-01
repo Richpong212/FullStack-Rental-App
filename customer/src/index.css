@@ -139,4 +139,10 @@ a:active {
   color: inherit;
 }
 
+/*footer styles*/
+footer {
+  margin-top: 18rem;
+  height: 5rem;
+}
+
 /* End main styles */

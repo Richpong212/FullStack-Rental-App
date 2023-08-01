@@ -1,15 +1,9 @@
 import React, { useState, ChangeEvent } from "react";
 import "./RegistrationSection.scss";
 import { FaTwitter, FaFacebookF } from "react-icons/fa";
-import {
-  loginCustomer,
-  registerCustomer,
-} from "../../service/customer.service";
-import { useDispatch } from "react-redux";
-import { login } from "../../redux/Slice/customerSlice";
+
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useNavigate } from "react-router-dom";
 
 import LoginField from "./LoginField";
 import RegisterField from "./RegisterField";
@@ -17,9 +11,6 @@ import RegisterField from "./RegisterField";
 // design for login form
 
 const RegistrationSection = () => {
-  // setting up the state for registration
-  const [registerData, setRegisterData]: any = useState();
-
   return (
     <div data-testid={"registrationsection"} className="globalmainstyles ">
       <ToastContainer />
