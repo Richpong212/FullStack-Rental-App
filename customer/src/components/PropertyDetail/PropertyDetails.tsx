@@ -48,10 +48,13 @@ const PropertyDetails = () => {
         </div>
       </div>
       <div className="container mt-3">
-        <h3>Amenities</h3>
+        {
+          // <h3>Amenities</h3>
+        }
         <div className="row">
-          <Amenities />
-          <Amenities />
+          {
+            //<Amenities />
+          }
         </div>
       </div>
     </div>

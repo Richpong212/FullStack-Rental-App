@@ -9,6 +9,8 @@ const ContactForm = () => {
   // state to hold the property
   const [property, setProperty] = useState<any>({}); // background image
 
+  console.log(property);
+
   // get location from url
   const location = useLocation();
 
@@ -56,11 +58,15 @@ const ContactForm = () => {
           {/* Email */}
           <div className="d-flex mb-4 gap-2">
             <div className="form__icon">
-              <EmailIcon className="icon" />
+              {
+                //<EmailIcon className="icon" />
+              }
             </div>
             <div>
-              <p className="card-text">Email</p>
+              {/*
+                <p className="card-text">Email</p>
               <p className="card-text">richpong123@gmail.com</p>
+                 */}
             </div>
           </div>
         </div>

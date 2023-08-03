@@ -8,6 +8,10 @@ const propertySchema = new mongoose.Schema(
       trim: true,
       minlength: [3, "Fullname must be at least 3 characters"],
     },
+    phone: {
+      type: String,
+      required: [true, "Please provide your phone number"],
+    },
     description: {
       type: String,
       required: [true, "Please provide your description"],

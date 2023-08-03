@@ -25,6 +25,7 @@ interface PropertyFormInput {
   owner?: string;
   area?: string;
   region?: string;
+  phone?: string;
 }
 
 const PropertyForm: FC = () => {
@@ -253,7 +254,7 @@ const PropertyForm: FC = () => {
           </div>
         </div>
       </div>
-      {/* Column for the location  */}
+      {/* Column for the Owner  */}
       <div className=" propertyform__main mb-2 ">
         <div className="container propertyform row mb-2">
           <div className="col-md-6">
@@ -266,6 +267,24 @@ const PropertyForm: FC = () => {
               placeholder={user.fullName}
               name="owner"
               disabled
+            />
+          </div>
+        </div>
+      </div>
+      {/* Column for the phonr  */}
+      <div className=" propertyform__main mb-2 ">
+        <div className="container propertyform row mb-2">
+          <div className="col-md-6">
+            <h6>Phone</h6>
+          </div>
+          <div className="col-md-6">
+            <input
+              className="form-control"
+              type="text"
+              placeholder="phone number"
+              name="phone"
+              value={input.phone || ""}
+              onChange={handleChange}
             />
           </div>
         </div>
